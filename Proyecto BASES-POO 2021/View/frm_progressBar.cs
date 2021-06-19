@@ -19,7 +19,7 @@ namespace Proyecto_BASES_POO_2021
         {
             pgb_load.ForeColor = Color.DarkCyan;
             pgb_load.Increment(1);
-            lbl_loading.Text = pgb_load.Value.ToString();
+            lbl_loading.Text = pgb_load.Value.ToString() + "%";
             if (pgb_load.Value==pgb_load.Maximum)
             {
                 tm_progressBar.Stop();
