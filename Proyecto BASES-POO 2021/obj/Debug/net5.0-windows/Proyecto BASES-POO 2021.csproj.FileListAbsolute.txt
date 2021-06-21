@@ -108,7 +108,6 @@ C:\Users\crist\Desktop\UCA\CICLO III\POO\PROYECTO\ProyectoBDPOO\Proyecto BASES-P
 C:\Users\crist\Desktop\UCA\CICLO III\POO\PROYECTO\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\ref\Proyecto BASES-POO 2021.dll
 C:\Users\crist\Desktop\UCA\CICLO III\POO\PROYECTO\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto BASES-POO 2021.pdb
 C:\Users\crist\Desktop\UCA\CICLO III\POO\PROYECTO\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto BASES-POO 2021.genruntimeconfig.cache
-C:\Users\crist\Desktop\UCA\CICLO III\POO\PROYECTO\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto_BASES_POO_2021.frm_principal.resources
 C:\Users\David Moreno\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\bin\Debug\net5.0-windows\Proyecto BASES-POO 2021.exe
 C:\Users\David Moreno\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\bin\Debug\net5.0-windows\Proyecto BASES-POO 2021.deps.json
 C:\Users\David Moreno\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\bin\Debug\net5.0-windows\Proyecto BASES-POO 2021.runtimeconfig.json
@@ -166,3 +165,5 @@ C:\Users\David Moreno\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\ne
 C:\Users\David Moreno\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto BASES-POO 2021.pdb
 C:\Users\David Moreno\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto BASES-POO 2021.genruntimeconfig.cache
 C:\Users\David Moreno\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto_BASES_POO_2021.frm_Login.resources
+C:\Users\crist\Desktop\UCA\CICLO III\POO\PROYECTO\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto_BASES_POO_2021.frm_EmployeeInfo.resources
+C:\Users\crist\Desktop\UCA\CICLO III\POO\PROYECTO\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto_BASES_POO_2021.frm_Login.resources

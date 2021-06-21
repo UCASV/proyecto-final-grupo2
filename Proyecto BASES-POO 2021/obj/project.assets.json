@@ -5761,24 +5761,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\David Moreno\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\crist\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\David Moreno\\Desktop\\ProyectoBDPOO\\Proyecto BASES-POO 2021\\Proyecto BASES-POO 2021.csproj",
+      "projectUniqueName": "C:\\Users\\crist\\Desktop\\UCA\\CICLO III\\POO\\PROYECTO\\ProyectoBDPOO\\Proyecto BASES-POO 2021\\Proyecto BASES-POO 2021.csproj",
       "projectName": "Proyecto BASES-POO 2021",
-      "projectPath": "C:\\Users\\David Moreno\\Desktop\\ProyectoBDPOO\\Proyecto BASES-POO 2021\\Proyecto BASES-POO 2021.csproj",
-      "packagesPath": "C:\\Users\\David Moreno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\David Moreno\\Desktop\\ProyectoBDPOO\\Proyecto BASES-POO 2021\\obj\\",
+      "projectPath": "C:\\Users\\crist\\Desktop\\UCA\\CICLO III\\POO\\PROYECTO\\ProyectoBDPOO\\Proyecto BASES-POO 2021\\Proyecto BASES-POO 2021.csproj",
+      "packagesPath": "C:\\Users\\crist\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\crist\\Desktop\\UCA\\CICLO III\\POO\\PROYECTO\\ProyectoBDPOO\\Proyecto BASES-POO 2021\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\David Moreno\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\crist\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
