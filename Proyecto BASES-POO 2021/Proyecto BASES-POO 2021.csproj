@@ -17,7 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Update="View\frm_principal.cs">
+      <Compile Update="View\frm_Login.cs">
         <SubType>Form</SubType>
       </Compile>
       <Compile Update="View\frm_progressBar.cs">
