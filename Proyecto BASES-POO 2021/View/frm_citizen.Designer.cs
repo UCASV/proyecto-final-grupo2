@@ -88,7 +88,7 @@ namespace Proyecto_BASES_POO_2021
             this.pnl_doc_ctzn.Controls.Add(this.pic_wave_ctzn);
             this.pnl_doc_ctzn.Location = new System.Drawing.Point(2, 0);
             this.pnl_doc_ctzn.Name = "pnl_doc_ctzn";
-            this.pnl_doc_ctzn.Size = new System.Drawing.Size(1438, 438);
+            this.pnl_doc_ctzn.Size = new System.Drawing.Size(1438, 433);
             this.pnl_doc_ctzn.TabIndex = 0;
             // 
             // pic_wave_ctzn

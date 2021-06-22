@@ -43,5 +43,37 @@ namespace Proyecto_BASES_POO_2021
             vaccinationProcesss.ShowDialog();
             this.Show(); 
         }
+
+        private void btnAppointmentFollow_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_appointment_tracking windowappointment = new frm_appointment_tracking();
+            windowappointment.ShowDialog();
+            this.Show(); 
+        }
+
+        private void btnEmployeeInfo_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_EmployeeInfo windowEmployeeInfo = new frm_EmployeeInfo();
+            windowEmployeeInfo.ShowDialog();
+            this.Show(); 
+        }
+
+        private void registroDeCitasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_appointment_tracking windowappointment = new frm_appointment_tracking();
+            windowappointment.ShowDialog();
+            this.Show(); 
+        }
+
+        private void informacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_EmployeeInfo windowEmployeeInfo = new frm_EmployeeInfo();
+            windowEmployeeInfo.ShowDialog();
+            this.Show(); 
+        }
     }
 }

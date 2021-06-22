@@ -148,6 +148,7 @@ namespace Proyecto_BASES_POO_2021
             this.informacionToolStripMenuItem.Name = "informacionToolStripMenuItem";
             this.informacionToolStripMenuItem.Size = new System.Drawing.Size(217, 34);
             this.informacionToolStripMenuItem.Text = "Informacion ";
+            this.informacionToolStripMenuItem.Click += new System.EventHandler(this.informacionToolStripMenuItem_Click);
             // 
             // citasToolStripMenuItem
             // 
@@ -178,6 +179,7 @@ namespace Proyecto_BASES_POO_2021
             this.registroDeCitasToolStripMenuItem.Name = "registroDeCitasToolStripMenuItem";
             this.registroDeCitasToolStripMenuItem.Size = new System.Drawing.Size(258, 34);
             this.registroDeCitasToolStripMenuItem.Text = "Registro de citas";
+            this.registroDeCitasToolStripMenuItem.Click += new System.EventHandler(this.registroDeCitasToolStripMenuItem_Click);
             // 
             // procesoDeVacunaciónToolStripMenuItem
             // 
@@ -271,6 +273,7 @@ namespace Proyecto_BASES_POO_2021
             this.btnAppointmentFollow.TabIndex = 0;
             this.btnAppointmentFollow.Text = "Seguimiento de citas";
             this.btnAppointmentFollow.UseVisualStyleBackColor = false;
+            this.btnAppointmentFollow.Click += new System.EventHandler(this.btnAppointmentFollow_Click);
             // 
             // panel5
             // 
@@ -314,6 +317,7 @@ namespace Proyecto_BASES_POO_2021
             this.btnEmployeeInfo.TabIndex = 0;
             this.btnEmployeeInfo.Text = "Informacion Empleado";
             this.btnEmployeeInfo.UseVisualStyleBackColor = false;
+            this.btnEmployeeInfo.Click += new System.EventHandler(this.btnEmployeeInfo_Click);
             // 
             // panel6
             // 
