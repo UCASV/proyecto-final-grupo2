@@ -24,7 +24,7 @@ namespace Proyecto_BASES_POO_2021
             {
                 tm_progressBar.Stop();
                 this.Hide();
-                frm_principal principal = new frm_principal();
+                frm_Login principal = new frm_Login();
                 principal.ShowDialog();
             }
         }
