@@ -17,7 +17,7 @@ namespace Proyecto_BASES_POO_2021
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             //Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_show_info());
+            Application.Run(new frm_mainMenu());
         }
     }
 }

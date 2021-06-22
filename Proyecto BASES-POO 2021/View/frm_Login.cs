@@ -61,8 +61,8 @@ namespace Proyecto_BASES_POO_2021
                 MessageBox.Show("Bienvenido", "Gobierno de El Salvador",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                     
-                //frm_ windowsSingIn = new frm_();
-               //windowsSingIn.Show();
+                frm_mainMenu windowsSingIn = new frm_mainMenu();
+               windowsSingIn.Show();
                
                 //Datetime.Now();
                 this.Hide();

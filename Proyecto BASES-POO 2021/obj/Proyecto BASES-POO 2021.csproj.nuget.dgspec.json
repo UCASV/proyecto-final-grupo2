@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fernando\\Desktop\\ProyectoBDPOO\\Proyecto BASES-POO 2021\\Proyecto BASES-POO 2021.csproj": {}
+    "C:\\Users\\USUARIO\\Desktop\\ProyectoBDPOO\\Proyecto BASES-POO 2021\\Proyecto BASES-POO 2021.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fernando\\Desktop\\ProyectoBDPOO\\Proyecto BASES-POO 2021\\Proyecto BASES-POO 2021.csproj": {
+    "C:\\Users\\USUARIO\\Desktop\\ProyectoBDPOO\\Proyecto BASES-POO 2021\\Proyecto BASES-POO 2021.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fernando\\Desktop\\ProyectoBDPOO\\Proyecto BASES-POO 2021\\Proyecto BASES-POO 2021.csproj",
+        "projectUniqueName": "C:\\Users\\USUARIO\\Desktop\\ProyectoBDPOO\\Proyecto BASES-POO 2021\\Proyecto BASES-POO 2021.csproj",
         "projectName": "Proyecto BASES-POO 2021",
-        "projectPath": "C:\\Users\\fernando\\Desktop\\ProyectoBDPOO\\Proyecto BASES-POO 2021\\Proyecto BASES-POO 2021.csproj",
-        "packagesPath": "C:\\Users\\fernando\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fernando\\Desktop\\ProyectoBDPOO\\Proyecto BASES-POO 2021\\obj\\",
+        "projectPath": "C:\\Users\\USUARIO\\Desktop\\ProyectoBDPOO\\Proyecto BASES-POO 2021\\Proyecto BASES-POO 2021.csproj",
+        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\USUARIO\\Desktop\\ProyectoBDPOO\\Proyecto BASES-POO 2021\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\fernando\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0-windows"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -71,7 +73,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\fernando\\.dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
