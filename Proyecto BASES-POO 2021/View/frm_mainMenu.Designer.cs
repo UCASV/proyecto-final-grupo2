@@ -42,7 +42,6 @@ namespace Proyecto_BASES_POO_2021
             this.citasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.realizarCitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroDeCitasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.procesoDeVacunaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -51,12 +50,10 @@ namespace Proyecto_BASES_POO_2021
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnAppointmentFollow = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btn_AplicationClose = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnEmployeeInfo = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.btnVaccinationProcess = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.ms_main.SuspendLayout();
@@ -65,10 +62,9 @@ namespace Proyecto_BASES_POO_2021
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).BeginInit();
+            this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -115,11 +111,11 @@ namespace Proyecto_BASES_POO_2021
             this.ms_main.BackColor = System.Drawing.Color.Transparent;
             this.ms_main.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ms_main.Dock = System.Windows.Forms.DockStyle.None;
-            this.ms_main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.toolStripMenuItem1, this.empleadosToolStripMenuItem, this.citasToolStripMenuItem, this.procesoDeVacunaciónToolStripMenuItem});
-            this.ms_main.Location = new System.Drawing.Point(647, 15);
+            this.ms_main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.toolStripMenuItem1, this.empleadosToolStripMenuItem, this.citasToolStripMenuItem});
+            this.ms_main.Location = new System.Drawing.Point(1000, 15);
             this.ms_main.Name = "ms_main";
             this.ms_main.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ms_main.Size = new System.Drawing.Size(587, 38);
+            this.ms_main.Size = new System.Drawing.Size(234, 38);
             this.ms_main.TabIndex = 0;
             this.ms_main.Text = "menuStrip1";
             // 
@@ -181,15 +177,6 @@ namespace Proyecto_BASES_POO_2021
             this.registroDeCitasToolStripMenuItem.Text = "Registro de citas";
             this.registroDeCitasToolStripMenuItem.Click += new System.EventHandler(this.registroDeCitasToolStripMenuItem_Click);
             // 
-            // procesoDeVacunaciónToolStripMenuItem
-            // 
-            this.procesoDeVacunaciónToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.procesoDeVacunaciónToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (8)))), ((int) (((byte) (31)))), ((int) (((byte) (45)))));
-            this.procesoDeVacunaciónToolStripMenuItem.Name = "procesoDeVacunaciónToolStripMenuItem";
-            this.procesoDeVacunaciónToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
-            this.procesoDeVacunaciónToolStripMenuItem.Text = "Proceso de vacunación";
-            this.procesoDeVacunaciónToolStripMenuItem.Click += new System.EventHandler(this.procesoDeVacunaciónToolStripMenuItem_Click);
-            // 
             // pictureBox4
             // 
             this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
@@ -208,7 +195,7 @@ namespace Proyecto_BASES_POO_2021
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.btnMakeAppointment);
             this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (2)))), ((int) (((byte) (186)))), ((int) (((byte) (211)))));
-            this.panel2.Location = new System.Drawing.Point(21, 534);
+            this.panel2.Location = new System.Drawing.Point(173, 529);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(260, 98);
             this.panel2.TabIndex = 1;
@@ -244,7 +231,7 @@ namespace Proyecto_BASES_POO_2021
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.btnAppointmentFollow);
             this.panel4.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (2)))), ((int) (((byte) (186)))), ((int) (((byte) (211)))));
-            this.panel4.Location = new System.Drawing.Point(304, 534);
+            this.panel4.Location = new System.Drawing.Point(456, 529);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(294, 98);
             this.panel4.TabIndex = 2;
@@ -278,10 +265,24 @@ namespace Proyecto_BASES_POO_2021
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (16)))), ((int) (((byte) (83)))), ((int) (((byte) (162)))));
-            this.panel5.Location = new System.Drawing.Point(2, 665);
+            this.panel5.Controls.Add(this.btn_AplicationClose);
+            this.panel5.Location = new System.Drawing.Point(2, 652);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1234, 29);
+            this.panel5.Size = new System.Drawing.Size(1234, 42);
             this.panel5.TabIndex = 3;
+            // 
+            // btn_AplicationClose
+            // 
+            this.btn_AplicationClose.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (132)))), ((int) (((byte) (165)))));
+            this.btn_AplicationClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_AplicationClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_AplicationClose.Location = new System.Drawing.Point(1103, 3);
+            this.btn_AplicationClose.Name = "btn_AplicationClose";
+            this.btn_AplicationClose.Size = new System.Drawing.Size(117, 37);
+            this.btn_AplicationClose.TabIndex = 0;
+            this.btn_AplicationClose.Text = "Salir";
+            this.btn_AplicationClose.UseVisualStyleBackColor = false;
+            this.btn_AplicationClose.Click += new System.EventHandler(this.btn_AplicationClose_Click);
             // 
             // panel3
             // 
@@ -289,7 +290,7 @@ namespace Proyecto_BASES_POO_2021
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Controls.Add(this.btnEmployeeInfo);
             this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (2)))), ((int) (((byte) (186)))), ((int) (((byte) (211)))));
-            this.panel3.Location = new System.Drawing.Point(621, 534);
+            this.panel3.Location = new System.Drawing.Point(773, 529);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(284, 98);
             this.panel3.TabIndex = 4;
@@ -319,60 +320,25 @@ namespace Proyecto_BASES_POO_2021
             this.btnEmployeeInfo.UseVisualStyleBackColor = false;
             this.btnEmployeeInfo.Click += new System.EventHandler(this.btnEmployeeInfo_Click);
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (16)))), ((int) (((byte) (83)))), ((int) (((byte) (162)))));
-            this.panel6.Controls.Add(this.pictureBox5);
-            this.panel6.Controls.Add(this.btnVaccinationProcess);
-            this.panel6.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (2)))), ((int) (((byte) (186)))), ((int) (((byte) (211)))));
-            this.panel6.Location = new System.Drawing.Point(927, 534);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(284, 98);
-            this.panel6.TabIndex = 5;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(78, 92);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 1;
-            this.pictureBox5.TabStop = false;
-            // 
-            // btnVaccinationProcess
-            // 
-            this.btnVaccinationProcess.BackColor = System.Drawing.Color.Transparent;
-            this.btnVaccinationProcess.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnVaccinationProcess.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnVaccinationProcess.ForeColor = System.Drawing.Color.Transparent;
-            this.btnVaccinationProcess.Image = ((System.Drawing.Image) (resources.GetObject("btnVaccinationProcess.Image")));
-            this.btnVaccinationProcess.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnVaccinationProcess.Location = new System.Drawing.Point(87, 3);
-            this.btnVaccinationProcess.Name = "btnVaccinationProcess";
-            this.btnVaccinationProcess.Size = new System.Drawing.Size(188, 92);
-            this.btnVaccinationProcess.TabIndex = 0;
-            this.btnVaccinationProcess.Text = "Proceso de vacunación";
-            this.btnVaccinationProcess.UseVisualStyleBackColor = false;
-            this.btnVaccinationProcess.Click += new System.EventHandler(this.button3_Click);
-            // 
             // frm_mainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1234, 695);
-            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.ms_main;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_mainMenu";
             this.Text = "MENU PRINCIPAL";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_mainMenu_FormClosing);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -383,18 +349,14 @@ namespace Proyecto_BASES_POO_2021
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).EndInit();
+            this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
-            this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.ToolStripMenuItem procesoDeVacunaciónToolStripMenuItem;
-
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Button btnVaccinationProcess;
+        private System.Windows.Forms.Button btn_AplicationClose;
+        
 
         private System.Windows.Forms.PictureBox pictureBox4;
 
@@ -427,9 +389,7 @@ namespace Proyecto_BASES_POO_2021
         private System.Windows.Forms.ToolStripMenuItem citasToolStripMenuItem;
 
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-
+        
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 
         private System.Windows.Forms.Panel panel1;

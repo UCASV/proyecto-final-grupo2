@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Proyecto_BASES_POO_2021.ProjectContext;
@@ -22,8 +23,7 @@ namespace Proyecto_BASES_POO_2021
 
         private void txt_lugar_TextChanged(object sender, EventArgs e)
         {
-
-            
+    
             
             var db = new PROJECT_BD_POOContext();
             
@@ -47,13 +47,42 @@ namespace Proyecto_BASES_POO_2021
             DateTime dtRan = dtMin.AddDays(rnDays);
 //representacion en un textbox
 
-            txt_lugar.Text = dtRan.ToString("dd/MM/yyyy  hh:mm:ss");
+            //txt_lugar.Text = dtRan.ToString("dd/MM/yyyy  hh:mm:ss");
             
             
             
             
         }
 
-        
+
+        private void frm_show_info_Load(object sender, EventArgs e)
+        {
+            var db = new PROJECT_BD_POOContext();
+            //Ordena todas las cabinas existentes en la base
+            var listacabinas = db.Cabins
+                .OrderBy(c => c.IdCabin)
+                .ToList();
+            Random rnd = new Random();
+            //genera un numero aleatorio dentro del rango de numero de cabinas que hay en la base
+            var randomCavin = rnd.Next(1, listacabinas.Count + 1) ;
+            //selecciona una dirección en base al numero aleatorio obtenido anteriormente
+            var query2 = (from a in db.Cabins
+                                where a.IdCabin == randomCavin  
+                                select a.CabinAddress).FirstOrDefault();
+            //muestra la informacion al gestor
+            textLugar.Text = query2;
+            textBox1.Text = randomCavin.ToString();
+            
+            //Realiza la insercion de datos en la base
+            /*var newAppointment = new Appointment()
+            {   
+                //DuiC = "juan",
+                IdCabin = randomCavin,
+                AppointmentAddress =  query2,
+                //AppointmentDate = ,
+                //WaitingTime = ,
+            };*/
+            
+        }
     }
 }

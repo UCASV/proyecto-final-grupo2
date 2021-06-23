@@ -70,6 +70,7 @@ namespace Proyecto_BASES_POO_2021
             // 
             // txtPatientProcess
             // 
+            this.txtPatientProcess.Enabled = false;
             this.txtPatientProcess.Location = new System.Drawing.Point(23, 29);
             this.txtPatientProcess.Name = "txtPatientProcess";
             this.txtPatientProcess.Size = new System.Drawing.Size(172, 26);

@@ -514,6 +514,7 @@ namespace Proyecto_BASES_POO_2021
             this.Controls.Add(this.pnl_left_ctzn);
             this.Controls.Add(this.pnl_doc_ctzn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_citizen";
@@ -532,18 +533,15 @@ namespace Proyecto_BASES_POO_2021
             this.grpQuestion1_ctzn.ResumeLayout(false);
             this.ResumeLayout(false);
         }
-
-        private System.Windows.Forms.TextBox textBox1;
+        
 
         private System.Windows.Forms.ComboBox cmbInstitution;
 
         private System.Windows.Forms.Panel panel1;
-
-        private System.Windows.Forms.ComboBox comboBox1;
+        
 
         private System.Windows.Forms.Label lblInstitution;
-
-        private System.Windows.Forms.Label lbl;
+        
 
         private System.Windows.Forms.Button btn_enviar_ctzn;
         private System.Windows.Forms.Button btnVolver_ctzn;

@@ -27,23 +27,7 @@ namespace Proyecto_BASES_POO_2021
             windowsSingIn.ShowDialog();
             this.Show(); 
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            frm_vaccinationProcess vaccinationProcesss = new frm_vaccinationProcess();
-            vaccinationProcesss.ShowDialog();
-            this.Show(); 
-        }
-
-        private void procesoDeVacunaciónToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            frm_vaccinationProcess vaccinationProcesss = new frm_vaccinationProcess();
-            vaccinationProcesss.ShowDialog();
-            this.Show(); 
-        }
-
+        
         private void btnAppointmentFollow_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -74,6 +58,16 @@ namespace Proyecto_BASES_POO_2021
             frm_EmployeeInfo windowEmployeeInfo = new frm_EmployeeInfo();
             windowEmployeeInfo.ShowDialog();
             this.Show(); 
+        }
+
+        private void frm_mainMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_AplicationClose_Click(object sender, EventArgs e)
+        {   
+                Application.Exit();
         }
     }
 }

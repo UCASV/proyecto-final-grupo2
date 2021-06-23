@@ -94,10 +94,6 @@ namespace Proyecto_BASES_POO_2021
         private System.Windows.Forms.Label lbl_loading;
         private System.Windows.Forms.Label lbl_charge;
 
-        private System.Windows.Forms.Label label2;
-
-        private System.Windows.Forms.Label label1;
-
         private System.Windows.Forms.ProgressBar pgb_load;
 
         private System.Timers.Timer tm_progressBar;

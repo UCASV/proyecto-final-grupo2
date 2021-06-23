@@ -7,14 +7,15 @@ namespace Proyecto_BASES_POO_2021
 {
     public partial class frm_vaccinationProcess : Form
     {
-        public frm_vaccinationProcess()
+        public frm_vaccinationProcess(string a)
         {
             InitializeComponent();
+            this.txtPatientProcess.Text = a;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dtpFirstDateVaccine.Value = DateTime.UtcNow;
+            dtpFirstDateVaccine.Value = DateTime.Now;
         }
 
         private void btnVolver_vaccine_Click(object sender, EventArgs e)
@@ -28,10 +29,15 @@ namespace Proyecto_BASES_POO_2021
             var query = (from a in db.CitizenForms
                 where a.DuiC == txtPatientProcess.Text
                 select a).FirstOrDefault();
+            //llenar los efectos secundarios de la vacuna en el usuario
             query.SideEffects = txtSideEfeccts.Text;
-            MessageBox.Show("Enfermedad/es registrada/s", "Gobierno de El Salvador",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //mensaje mostrado cuando se registran los datos del proceso de vacunación del ciudadano correctamente 
+            //También puede quedar vacio
+            MessageBox.Show("Se ha registrado todo con exito", "Gobierno de El Salvador",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             db.SaveChanges();
+            this.Hide();
+
         }
     }
 }

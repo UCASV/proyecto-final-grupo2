@@ -46,9 +46,10 @@ namespace Proyecto_BASES_POO_2021
             this.btn_close.BackColor = System.Drawing.Color.DarkCyan;
             this.btn_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btn_close.ForeColor = System.Drawing.Color.White;
-            this.btn_close.Location = new System.Drawing.Point(713, 464);
+            this.btn_close.Location = new System.Drawing.Point(1070, 714);
+            this.btn_close.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(90, 36);
+            this.btn_close.Size = new System.Drawing.Size(135, 55);
             this.btn_close.TabIndex = 1;
             this.btn_close.Text = "cerrar";
             this.btn_close.UseVisualStyleBackColor = false;
@@ -77,7 +78,8 @@ namespace Proyecto_BASES_POO_2021
             this.dgv_employeeInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgv_employeeInfo.EnableHeadersVisualStyles = false;
             this.dgv_employeeInfo.GridColor = System.Drawing.Color.DarkCyan;
-            this.dgv_employeeInfo.Location = new System.Drawing.Point(28, 70);
+            this.dgv_employeeInfo.Location = new System.Drawing.Point(42, 108);
+            this.dgv_employeeInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgv_employeeInfo.Name = "dgv_employeeInfo";
             this.dgv_employeeInfo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgv_employeeInfo.RowHeadersVisible = false;
@@ -88,30 +90,33 @@ namespace Proyecto_BASES_POO_2021
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.dgv_employeeInfo.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_employeeInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_employeeInfo.Size = new System.Drawing.Size(775, 388);
+            this.dgv_employeeInfo.Size = new System.Drawing.Size(1162, 597);
             this.dgv_employeeInfo.TabIndex = 2;
             // 
             // lbl_employeeInfo
             // 
             this.lbl_employeeInfo.BackColor = System.Drawing.Color.Transparent;
             this.lbl_employeeInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lbl_employeeInfo.Location = new System.Drawing.Point(266, 22);
+            this.lbl_employeeInfo.Location = new System.Drawing.Point(399, 34);
+            this.lbl_employeeInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_employeeInfo.Name = "lbl_employeeInfo";
-            this.lbl_employeeInfo.Size = new System.Drawing.Size(301, 31);
+            this.lbl_employeeInfo.Size = new System.Drawing.Size(452, 48);
             this.lbl_employeeInfo.TabIndex = 3;
             this.lbl_employeeInfo.Text = "Employee Information";
             // 
             // frm_EmployeeInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(828, 512);
+            this.ClientSize = new System.Drawing.Size(1242, 788);
             this.Controls.Add(this.lbl_employeeInfo);
             this.Controls.Add(this.dgv_employeeInfo);
             this.Controls.Add(this.btn_close);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frm_EmployeeInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee";

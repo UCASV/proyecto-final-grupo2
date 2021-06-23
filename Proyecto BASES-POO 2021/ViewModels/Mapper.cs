@@ -22,6 +22,21 @@ namespace Proyecto_BASES_POO_2021.viewModels
             };
         }
         
+        public static CitizenFormVm MapCitizenFormVm(CitizenForm c)
+        {
+            return new CitizenFormVm()
+            {
+                DuiC = c.DuiC,
+                CitizenName = c.CitizenName,
+                FirstVaccineDate = c.FirstVaccineDate,
+                CitizenAddress = c.CitizenAddress,
+                Telephone = c.Telephone,
+                CitizenEmail = c.CitizenEmail,
+                IdInstitution = c.IdInstitution,
+                PriorityGroup =c.PriorityGroup
+            };
+        }
+        
         
         
          
