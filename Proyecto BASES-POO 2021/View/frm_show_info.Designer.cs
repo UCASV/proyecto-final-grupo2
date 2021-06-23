@@ -42,7 +42,8 @@ namespace Proyecto_BASES_POO_2021
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txt_lugar = new System.Windows.Forms.TextBox();
-            this.dtp_fecha = new System.Windows.Forms.DateTimePicker();
+            this.txt_fecha = new System.Windows.Forms.TextBox();
+            this.txt_siguienteFecha = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).BeginInit();
@@ -66,7 +67,7 @@ namespace Proyecto_BASES_POO_2021
             this.lbl_lugar.Name = "lbl_lugar";
             this.lbl_lugar.Size = new System.Drawing.Size(202, 67);
             this.lbl_lugar.TabIndex = 5;
-            this.lbl_lugar.Text = "Lugar de vacunación:";
+            this.lbl_lugar.Text = "Cabina de vacunación:";
             // 
             // lbl_medico
             // 
@@ -121,7 +122,7 @@ namespace Proyecto_BASES_POO_2021
             this.pictureBox3.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(238, 209);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 34);
+            this.pictureBox3.Size = new System.Drawing.Size(40, 32);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 14;
             this.pictureBox3.TabStop = false;
@@ -141,21 +142,31 @@ namespace Proyecto_BASES_POO_2021
             // 
             this.txt_lugar.BackColor = System.Drawing.Color.GhostWhite;
             this.txt_lugar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txt_lugar.Location = new System.Drawing.Point(298, 221);
+            this.txt_lugar.Location = new System.Drawing.Point(298, 209);
             this.txt_lugar.Name = "txt_lugar";
             this.txt_lugar.ReadOnly = true;
             this.txt_lugar.Size = new System.Drawing.Size(189, 22);
-            this.txt_lugar.TabIndex = 16;
-            this.txt_lugar.TextChanged += new System.EventHandler(this.txt_lugar_TextChanged);
+            this.txt_lugar.TabIndex = 17;
             // 
-            // dtp_fecha
+            // txt_fecha
             // 
-            this.dtp_fecha.CustomFormat = "dd/mm/yy   hh:mm";
-            this.dtp_fecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_fecha.Location = new System.Drawing.Point(298, 124);
-            this.dtp_fecha.Name = "dtp_fecha";
-            this.dtp_fecha.Size = new System.Drawing.Size(189, 22);
-            this.dtp_fecha.TabIndex = 17;
+            this.txt_fecha.BackColor = System.Drawing.Color.GhostWhite;
+            this.txt_fecha.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txt_fecha.Location = new System.Drawing.Point(298, 126);
+            this.txt_fecha.Name = "txt_fecha";
+            this.txt_fecha.ReadOnly = true;
+            this.txt_fecha.Size = new System.Drawing.Size(189, 22);
+            this.txt_fecha.TabIndex = 18;
+            // 
+            // txt_siguienteFecha
+            // 
+            this.txt_siguienteFecha.BackColor = System.Drawing.Color.GhostWhite;
+            this.txt_siguienteFecha.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txt_siguienteFecha.Location = new System.Drawing.Point(550, 126);
+            this.txt_siguienteFecha.Name = "txt_siguienteFecha";
+            this.txt_siguienteFecha.ReadOnly = true;
+            this.txt_siguienteFecha.Size = new System.Drawing.Size(189, 22);
+            this.txt_siguienteFecha.TabIndex = 19;
             // 
             // frm_show_info
             // 
@@ -164,7 +175,8 @@ namespace Proyecto_BASES_POO_2021
             this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(761, 399);
-            this.Controls.Add(this.dtp_fecha);
+            this.Controls.Add(this.txt_siguienteFecha);
+            this.Controls.Add(this.txt_fecha);
             this.Controls.Add(this.txt_lugar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox3);
@@ -178,6 +190,7 @@ namespace Proyecto_BASES_POO_2021
             this.MaximizeBox = false;
             this.Name = "frm_show_info";
             this.Text = "Información Cita";
+            this.Load += new System.EventHandler(this.frm_show_info_Load);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).EndInit();
@@ -185,8 +198,11 @@ namespace Proyecto_BASES_POO_2021
             this.PerformLayout();
         }
 
-        private System.Windows.Forms.DateTimePicker dtp_fecha;
+        private System.Windows.Forms.TextBox txt_siguienteFecha;
 
+        private System.Windows.Forms.TextBox txt_fecha;
+
+        private System.Windows.Forms.TextBox textBox1;
 
 
         private System.Windows.Forms.TextBox txt_lugar;

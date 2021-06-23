@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Windows.Forms;
+using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Proyecto_BASES_POO_2021.ProjectContext;
-
+using System.Linq;
 
 namespace Proyecto_BASES_POO_2021
 {
@@ -20,40 +22,56 @@ namespace Proyecto_BASES_POO_2021
         }
         
 
-        private void txt_lugar_TextChanged(object sender, EventArgs e)
+        private void frm_show_info_Load(object sender, EventArgs e)
         {
-
-            
-            
-            var db = new PROJECT_BD_POOContext();
-            
             System.Globalization.DateTimeFormatInfo dInfo = new System.Globalization.DateTimeFormatInfo();
             dInfo.ShortDatePattern = "dd/MM/yyyy  hh:mm:ss";
- //para pasar la info de un par de textbox string a datetime
-            
-            DateTime dtMin = Convert.ToDateTime(DateTime.Now, dInfo);
-            DateTime dtMax = Convert.ToDateTime("08/08/2021", dInfo);
-//para calcular la diferencia de días entre fechas
+            //para pasar la info de un par de textbox string a datetime
 
+            var newdatemax = DateTime.Now.AddDays(30);
+            DateTime dtMin = Convert.ToDateTime(DateTime.Now, dInfo);
+            DateTime dtMax = Convert.ToDateTime(newdatemax, dInfo);
+            //para calcular la diferencia de días entre fechas
+            /*
+             var newdatemax2 = DateTime.Now.AddDays(60);
+             DateTime dtMin = Convert.ToDateTime(newdatemax, dInfo);
+            DateTime dtMax = Convert.ToDateTime(newdatemax2, dInfo);
+             */
             TimeSpan tsMax = dtMax - dtMin;
-// para crear el random
+            // para crear el random
 
             Random rn = new Random();
-//dias aleatorios que generarán la proxima fecha
+            //dias aleatorios que generarán la proxima fecha
 
             int rnDays = rn.Next(1, tsMax.Days);
-//fecha aleatoria resultante de los dias sumados a la fecha minima
+            //fecha aleatoria resultante de los dias sumados a la fecha minima
 
             DateTime dtRan = dtMin.AddDays(rnDays);
-//representacion en un textbox
+            //representacion en un textbox
 
-            txt_lugar.Text = dtRan.ToString("dd/MM/yyyy  hh:mm:ss");
+            txt_fecha.Text = dtRan.ToString("dd/MM/yyyy  hh:mm:ss tt");
+
+           
             
+            //para segundo formulario
+            //Se crea un nuevo random entre 6 y 8 semanas 
+            Random rnd2 = new Random();
+            var newweeks = rnd2.Next(42,56);
             
+            DateTime nuevaFecha = Convert.ToDateTime(txt_fecha.Text);
+            //El resultado es una nueva fecha con la suma de ese resultado a la fecha de la primera sita
+            nuevaFecha = nuevaFecha.AddDays(newweeks);
+
             
-            
+
+
+
+
+
+
+
+
         }
-
         
     }
 }
