@@ -39,5 +39,12 @@ namespace Proyecto_BASES_POO_2021
             this.Hide();
 
         }
+
+        private void button2_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.Hide();
+            frm_secondVaccine secondvaccine = new frm_secondVaccine(txtPatientProcess.Text);
+            secondvaccine.Show();
+        }
     }
 }

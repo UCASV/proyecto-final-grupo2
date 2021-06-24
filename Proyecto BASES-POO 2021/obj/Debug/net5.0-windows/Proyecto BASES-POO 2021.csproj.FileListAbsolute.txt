@@ -109,7 +109,6 @@ C:\Users\crist\Desktop\UCA\CICLO III\POO\PROYECTO\ProyectoBDPOO\Proyecto BASES-P
 C:\Users\crist\Desktop\UCA\CICLO III\POO\PROYECTO\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto BASES-POO 2021.pdb
 C:\Users\crist\Desktop\UCA\CICLO III\POO\PROYECTO\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto BASES-POO 2021.genruntimeconfig.cache
 <<<<<<< HEAD
-C:\Users\crist\Desktop\UCA\CICLO III\POO\PROYECTO\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto_BASES_POO_2021.frm_principal.resources
 C:\Users\fernando\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\bin\Debug\net5.0-windows\Proyecto BASES-POO 2021.exe
 C:\Users\fernando\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\bin\Debug\net5.0-windows\Proyecto BASES-POO 2021.deps.json
 C:\Users\fernando\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\bin\Debug\net5.0-windows\Proyecto BASES-POO 2021.runtimeconfig.json
@@ -297,3 +296,9 @@ C:\Users\fernando\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0
 C:\Users\fernando\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto_BASES_POO_2021.frm_Login.resources
 C:\Users\fernando\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto_BASES_POO_2021.frm_mainMenu.resources
 C:\Users\fernando\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto_BASES_POO_2021.frm_vaccinationProcess.resources
+C:\Users\crist\Desktop\UCA\CICLO III\POO\PROYECTO\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto_BASES_POO_2021.frm_appointment_tracking.resources
+C:\Users\crist\Desktop\UCA\CICLO III\POO\PROYECTO\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto_BASES_POO_2021.frm_citizen.resources
+C:\Users\crist\Desktop\UCA\CICLO III\POO\PROYECTO\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto_BASES_POO_2021.frm_mainMenu.resources
+C:\Users\crist\Desktop\UCA\CICLO III\POO\PROYECTO\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto_BASES_POO_2021.frm_secondVaccine.resources
+C:\Users\crist\Desktop\UCA\CICLO III\POO\PROYECTO\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto_BASES_POO_2021.frm_show_info.resources
+C:\Users\crist\Desktop\UCA\CICLO III\POO\PROYECTO\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto_BASES_POO_2021.frm_vaccinationProcess.resources

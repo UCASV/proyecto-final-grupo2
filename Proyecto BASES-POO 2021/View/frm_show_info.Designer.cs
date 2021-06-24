@@ -61,9 +61,10 @@ namespace Proyecto_BASES_POO_2021
             // 
             this.lbl_fecha.BackColor = System.Drawing.Color.Transparent;
             this.lbl_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lbl_fecha.Location = new System.Drawing.Point(46, 168);
+            this.lbl_fecha.Location = new System.Drawing.Point(31, 109);
+            this.lbl_fecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_fecha.Name = "lbl_fecha";
-            this.lbl_fecha.Size = new System.Drawing.Size(236, 62);
+            this.lbl_fecha.Size = new System.Drawing.Size(157, 40);
             this.lbl_fecha.TabIndex = 4;
             this.lbl_fecha.Text = "Fecha y hora:";
             // 
@@ -71,9 +72,10 @@ namespace Proyecto_BASES_POO_2021
             // 
             this.lbl_lugar.BackColor = System.Drawing.Color.Transparent;
             this.lbl_lugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lbl_lugar.Location = new System.Drawing.Point(46, 255);
+            this.lbl_lugar.Location = new System.Drawing.Point(31, 166);
+            this.lbl_lugar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_lugar.Name = "lbl_lugar";
-            this.lbl_lugar.Size = new System.Drawing.Size(226, 87);
+            this.lbl_lugar.Size = new System.Drawing.Size(151, 57);
             this.lbl_lugar.TabIndex = 5;
             this.lbl_lugar.Text = "Lugar de vacunación:";
             // 
@@ -81,9 +83,10 @@ namespace Proyecto_BASES_POO_2021
             // 
             this.lbl_medico.BackColor = System.Drawing.Color.Transparent;
             this.lbl_medico.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lbl_medico.Location = new System.Drawing.Point(93, 9);
+            this.lbl_medico.Location = new System.Drawing.Point(62, 6);
+            this.lbl_medico.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_medico.Name = "lbl_medico";
-            this.lbl_medico.Size = new System.Drawing.Size(418, 72);
+            this.lbl_medico.Size = new System.Drawing.Size(279, 47);
             this.lbl_medico.TabIndex = 6;
             this.lbl_medico.Text = "Centro Médico";
             // 
@@ -91,10 +94,10 @@ namespace Proyecto_BASES_POO_2021
             // 
             this.btn_aceptar.BackColor = System.Drawing.Color.CadetBlue;
             this.btn_aceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btn_aceptar.Location = new System.Drawing.Point(12, 485);
-            this.btn_aceptar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btn_aceptar.Location = new System.Drawing.Point(8, 315);
+            this.btn_aceptar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_aceptar.Name = "btn_aceptar";
-            this.btn_aceptar.Size = new System.Drawing.Size(142, 42);
+            this.btn_aceptar.Size = new System.Drawing.Size(95, 27);
             this.btn_aceptar.TabIndex = 11;
             this.btn_aceptar.Text = "Aceptar";
             this.btn_aceptar.UseVisualStyleBackColor = false;
@@ -105,10 +108,10 @@ namespace Proyecto_BASES_POO_2021
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(713, 485);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(475, 315);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 42);
+            this.pictureBox1.Size = new System.Drawing.Size(30, 27);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
@@ -118,10 +121,10 @@ namespace Proyecto_BASES_POO_2021
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(280, 168);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(187, 109);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(45, 49);
+            this.pictureBox2.Size = new System.Drawing.Size(30, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
@@ -131,10 +134,10 @@ namespace Proyecto_BASES_POO_2021
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(280, 268);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pictureBox3.Location = new System.Drawing.Point(187, 174);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(45, 42);
+            this.pictureBox3.Size = new System.Drawing.Size(30, 27);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 14;
             this.pictureBox3.TabStop = false;
@@ -143,10 +146,10 @@ namespace Proyecto_BASES_POO_2021
             // 
             this.button1.BackColor = System.Drawing.Color.CadetBlue;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.button1.Location = new System.Drawing.Point(772, 485);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.button1.Location = new System.Drawing.Point(515, 315);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 42);
+            this.button1.Size = new System.Drawing.Size(101, 27);
             this.button1.TabIndex = 15;
             this.button1.Text = "Convertir a PDF";
             this.button1.UseVisualStyleBackColor = false;
@@ -154,29 +157,28 @@ namespace Proyecto_BASES_POO_2021
             // text_Lugar
             // 
             this.text_Lugar.Enabled = false;
-            this.text_Lugar.Location = new System.Drawing.Point(346, 255);
-            this.text_Lugar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.text_Lugar.Location = new System.Drawing.Point(231, 166);
             this.text_Lugar.Multiline = true;
             this.text_Lugar.Name = "text_Lugar";
-            this.text_Lugar.Size = new System.Drawing.Size(242, 64);
+            this.text_Lugar.Size = new System.Drawing.Size(163, 43);
             this.text_Lugar.TabIndex = 18;
             // 
             // txtidcabin
             // 
             this.txtidcabin.Enabled = false;
-            this.txtidcabin.Location = new System.Drawing.Point(346, 375);
-            this.txtidcabin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtidcabin.Location = new System.Drawing.Point(231, 244);
             this.txtidcabin.Name = "txtidcabin";
-            this.txtidcabin.Size = new System.Drawing.Size(241, 26);
+            this.txtidcabin.Size = new System.Drawing.Size(162, 20);
             this.txtidcabin.TabIndex = 19;
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label1.Location = new System.Drawing.Point(46, 365);
+            this.label1.Location = new System.Drawing.Point(31, 237);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 39);
+            this.label1.Size = new System.Drawing.Size(97, 25);
             this.label1.TabIndex = 20;
             this.label1.Text = "Cabina:";
             // 
@@ -185,10 +187,10 @@ namespace Proyecto_BASES_POO_2021
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBox4.BackgroundImage")));
             this.pictureBox4.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(280, 365);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pictureBox4.Location = new System.Drawing.Point(187, 237);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(45, 42);
+            this.pictureBox4.Size = new System.Drawing.Size(30, 27);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 21;
             this.pictureBox4.TabStop = false;
@@ -196,28 +198,27 @@ namespace Proyecto_BASES_POO_2021
             // txt_fecha
             // 
             this.txt_fecha.Enabled = false;
-            this.txt_fecha.Location = new System.Drawing.Point(346, 178);
-            this.txt_fecha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_fecha.Location = new System.Drawing.Point(231, 116);
             this.txt_fecha.Name = "txt_fecha";
-            this.txt_fecha.Size = new System.Drawing.Size(241, 26);
+            this.txt_fecha.Size = new System.Drawing.Size(162, 20);
             this.txt_fecha.TabIndex = 22;
             // 
             // txtDuiShow
             // 
             this.txtDuiShow.Enabled = false;
-            this.txtDuiShow.Location = new System.Drawing.Point(346, 99);
-            this.txtDuiShow.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDuiShow.Location = new System.Drawing.Point(231, 64);
             this.txtDuiShow.Name = "txtDuiShow";
-            this.txtDuiShow.Size = new System.Drawing.Size(241, 26);
+            this.txtDuiShow.Size = new System.Drawing.Size(162, 20);
             this.txtDuiShow.TabIndex = 23;
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label2.Location = new System.Drawing.Point(46, 96);
+            this.label2.Location = new System.Drawing.Point(31, 62);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(236, 39);
+            this.label2.Size = new System.Drawing.Size(157, 25);
             this.label2.TabIndex = 24;
             this.label2.Text = "Dui:";
             // 
@@ -226,9 +227,10 @@ namespace Proyecto_BASES_POO_2021
             this.chkPriority.BackColor = System.Drawing.Color.Transparent;
             this.chkPriority.Enabled = false;
             this.chkPriority.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.chkPriority.Location = new System.Drawing.Point(603, 375);
+            this.chkPriority.Location = new System.Drawing.Point(402, 244);
+            this.chkPriority.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkPriority.Name = "chkPriority";
-            this.chkPriority.Size = new System.Drawing.Size(125, 29);
+            this.chkPriority.Size = new System.Drawing.Size(83, 19);
             this.chkPriority.TabIndex = 25;
             this.chkPriority.Text = "Prioridad";
             this.chkPriority.UseVisualStyleBackColor = false;
@@ -238,22 +240,22 @@ namespace Proyecto_BASES_POO_2021
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBox5.BackgroundImage")));
             this.pictureBox5.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(280, 86);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pictureBox5.Location = new System.Drawing.Point(187, 56);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(45, 49);
+            this.pictureBox5.Size = new System.Drawing.Size(30, 32);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 26;
             this.pictureBox5.TabStop = false;
             // 
             // frm_show_info
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(936, 541);
+            this.ClientSize = new System.Drawing.Size(624, 352);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.chkPriority);
             this.Controls.Add(this.label2);
@@ -272,10 +274,11 @@ namespace Proyecto_BASES_POO_2021
             this.Controls.Add(this.lbl_lugar);
             this.Controls.Add(this.lbl_fecha);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_show_info";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Información Cita";
             this.Load += new System.EventHandler(this.frm_show_info_Load);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
