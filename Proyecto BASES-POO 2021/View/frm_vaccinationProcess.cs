@@ -31,6 +31,7 @@ namespace Proyecto_BASES_POO_2021
                 select a).FirstOrDefault();
             //llenar los efectos secundarios de la vacuna en el usuario
             query.SideEffects = txtSideEfeccts.Text;
+            query.FirstVaccineDate = dtpFirstDateVaccine.Value;
             //mensaje mostrado cuando se registran los datos del proceso de vacunación del ciudadano correctamente 
             //También puede quedar vacio
             MessageBox.Show("Se ha registrado todo con exito", "Gobierno de El Salvador",

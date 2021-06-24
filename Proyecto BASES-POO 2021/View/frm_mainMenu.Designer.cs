@@ -337,6 +337,7 @@ namespace Proyecto_BASES_POO_2021
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_mainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MENU PRINCIPAL";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_mainMenu_FormClosing);
             this.panel1.ResumeLayout(false);

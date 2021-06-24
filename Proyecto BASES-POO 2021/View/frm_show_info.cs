@@ -29,10 +29,12 @@ namespace Proyecto_BASES_POO_2021
         {
             
             var db = new PROJECT_BD_POOContext();
-
+ 
+            //***********
             var validationPriority = (from a in db.CitizenForms
                 where a.DuiC == txtDuiShow.Text  
                 select a.PriorityGroup).FirstOrDefault();
+            
             chkPriority.Checked = validationPriority;
             
             //Ordena todas las cabinas existentes en la base
@@ -121,16 +123,6 @@ namespace Proyecto_BASES_POO_2021
 
             }
             
-
-            /*//para segundo formulario
-            //Se crea un nuevo random entre 6 y 8 semanas 
-            Random rnd2 = new Random();
-            var newweeks = rnd2.Next(42,56);
-            
-            DateTime nuevaFecha = Convert.ToDateTime(txt_fecha.Text);
-            //El resultado es una nueva fecha con la suma de ese resultado a la fecha de la primera sita
-            nuevaFecha = nuevaFecha.AddDays(newweeks);*/
-        
         }
         
     }
