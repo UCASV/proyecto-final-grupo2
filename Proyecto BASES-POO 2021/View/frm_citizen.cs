@@ -79,7 +79,7 @@ namespace Proyecto_BASES_POO_2021
                     MessageBox.Show("Ciudadano registrado exitosamente!", "Gobierno de El Salvador",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
-                    frm_show_info vaccinationProcesss = new frm_show_info();
+                    frm_show_info vaccinationProcesss = new frm_show_info(msktxt_dui_ctzn.Text);
                     vaccinationProcesss.ShowDialog();
                     this.Hide();
                 }

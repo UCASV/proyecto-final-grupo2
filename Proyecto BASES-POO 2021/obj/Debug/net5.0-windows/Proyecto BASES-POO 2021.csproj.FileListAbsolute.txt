@@ -155,7 +155,6 @@ C:\Users\fernando\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\bin\Debug\net5.0
 C:\Users\fernando\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\fernando\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\fernando\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto BASES-POO 2021.csproj.AssemblyReference.cache
-C:\Users\fernando\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto_BASES_POO_2021.frm_principal.resources
 C:\Users\fernando\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto_BASES_POO_2021.frm_progressBar.resources
 C:\Users\fernando\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto_BASES_POO_2021.frm_show_info.resources
 C:\Users\fernando\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto BASES-POO 2021.csproj.GenerateResource.cache
@@ -293,3 +292,8 @@ C:\Users\USUARIO\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-
 C:\Users\USUARIO\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\ref\Proyecto BASES-POO 2021.dll
 C:\Users\USUARIO\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto BASES-POO 2021.pdb
 C:\Users\USUARIO\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto BASES-POO 2021.genruntimeconfig.cache
+C:\Users\fernando\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto_BASES_POO_2021.frm_citizen.resources
+C:\Users\fernando\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto_BASES_POO_2021.frm_EmployeeInfo.resources
+C:\Users\fernando\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto_BASES_POO_2021.frm_Login.resources
+C:\Users\fernando\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto_BASES_POO_2021.frm_mainMenu.resources
+C:\Users\fernando\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto_BASES_POO_2021.frm_vaccinationProcess.resources
