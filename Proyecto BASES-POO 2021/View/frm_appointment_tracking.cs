@@ -16,7 +16,7 @@ namespace Proyecto_BASES_POO_2021
         public frm_appointment_tracking()
         {
             InitializeComponent();
-            
+            btn_pdf_citas.Enabled = false;
         }
 
         private void dataview()
@@ -159,9 +159,9 @@ namespace Proyecto_BASES_POO_2021
             }
  
             //Exporting to PDF
-            string folderPath = @"C:\Users\USUARIO\Desktop\ProyectoBDPOO\PDFAppointment";
+            string folderPath = @"C:\Users\crist\Desktop\UCA\CICLO III\POO\PROYECTO\ProyectoBDPOO\Proyecto BASES-POO 2021\ReportesCitas\";
             
-            using (FileStream stream = new FileStream(folderPath + "Info.pdf", FileMode.Create))
+            using (FileStream stream = new FileStream(folderPath + txt_pdfName.Text + ".pdf", FileMode.Create))
             {
                 Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f);
                 PdfWriter.GetInstance(pdfDoc, stream);
@@ -171,7 +171,22 @@ namespace Proyecto_BASES_POO_2021
                 stream.Close();
                 MessageBox.Show("PDF exportado correctamente!", "Gobierno de El Salvador",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txt_pdfName.Text = "";
+            }
+
+            
+        }
+        
+        private void txt_pdfName_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_pdfName.Text.Length > 0)
+            {
+                btn_pdf_citas.Enabled = true;
+            }
+            else if (txt_pdfName.Text.Length == 0)
+            {
+                btn_pdf_citas.Enabled = false;
             }
         }
-        }
+    }
 }

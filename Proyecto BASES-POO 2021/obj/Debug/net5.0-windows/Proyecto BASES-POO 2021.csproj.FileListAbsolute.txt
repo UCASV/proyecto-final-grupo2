@@ -305,3 +305,5 @@ C:\Users\USUARIO\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-
 C:\Users\USUARIO\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\obj\Debug\net5.0-windows\Proyecto BASES-POO 2021.csproj.GenerateResource.cache
 C:\Users\USUARIO\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\bin\Debug\net5.0-windows\BouncyCastle.Crypto.dll
 C:\Users\USUARIO\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\bin\Debug\net5.0-windows\itextsharp.dll
+C:\Users\crist\Desktop\UCA\CICLO III\POO\PROYECTO\ProyectoBDPOO\Proyecto BASES-POO 2021\bin\Debug\net5.0-windows\BouncyCastle.Crypto.dll
+C:\Users\crist\Desktop\UCA\CICLO III\POO\PROYECTO\ProyectoBDPOO\Proyecto BASES-POO 2021\bin\Debug\net5.0-windows\itextsharp.dll
