@@ -56,6 +56,8 @@ namespace Proyecto_BASES_POO_2021
             this.radNoC2 = new System.Windows.Forms.RadioButton();
             this.radSiC = new System.Windows.Forms.RadioButton();
             this.dgvAppointment2 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_pdfName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize) (this.dgvAppointment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
@@ -71,9 +73,10 @@ namespace Proyecto_BASES_POO_2021
             this.btn_buscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btn_buscar.ForeColor = System.Drawing.Color.Black;
-            this.btn_buscar.Location = new System.Drawing.Point(91, 130);
+            this.btn_buscar.Location = new System.Drawing.Point(61, 84);
+            this.btn_buscar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(216, 48);
+            this.btn_buscar.Size = new System.Drawing.Size(144, 31);
             this.btn_buscar.TabIndex = 1;
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.UseVisualStyleBackColor = false;
@@ -85,9 +88,10 @@ namespace Proyecto_BASES_POO_2021
             this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btn_cancelar.ForeColor = System.Drawing.Color.Black;
-            this.btn_cancelar.Location = new System.Drawing.Point(12, 594);
+            this.btn_cancelar.Location = new System.Drawing.Point(8, 386);
+            this.btn_cancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(162, 57);
+            this.btn_cancelar.Size = new System.Drawing.Size(108, 37);
             this.btn_cancelar.TabIndex = 2;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = false;
@@ -114,7 +118,8 @@ namespace Proyecto_BASES_POO_2021
             this.dgvAppointment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAppointment.EnableHeadersVisualStyles = false;
             this.dgvAppointment.GridColor = System.Drawing.Color.LightSeaGreen;
-            this.dgvAppointment.Location = new System.Drawing.Point(0, 225);
+            this.dgvAppointment.Location = new System.Drawing.Point(0, 146);
+            this.dgvAppointment.Margin = new System.Windows.Forms.Padding(2);
             this.dgvAppointment.Name = "dgvAppointment";
             this.dgvAppointment.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -134,7 +139,7 @@ namespace Proyecto_BASES_POO_2021
             this.dgvAppointment.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvAppointment.RowTemplate.Height = 24;
             this.dgvAppointment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAppointment.Size = new System.Drawing.Size(1249, 103);
+            this.dgvAppointment.Size = new System.Drawing.Size(833, 67);
             this.dgvAppointment.TabIndex = 3;
             // 
             // lbl_dui
@@ -143,20 +148,22 @@ namespace Proyecto_BASES_POO_2021
             this.lbl_dui.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.lbl_dui.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl_dui.ForeColor = System.Drawing.Color.Black;
-            this.lbl_dui.Location = new System.Drawing.Point(323, 118);
+            this.lbl_dui.Location = new System.Drawing.Point(215, 77);
+            this.lbl_dui.Margin = new System.Windows.Forms.Padding(2);
             this.lbl_dui.Name = "lbl_dui";
             this.lbl_dui.ReadOnly = true;
-            this.lbl_dui.Size = new System.Drawing.Size(187, 31);
+            this.lbl_dui.Size = new System.Drawing.Size(126, 23);
             this.lbl_dui.TabIndex = 4;
             this.lbl_dui.Text = "Ingrese su dui:";
             this.lbl_dui.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // mskDuitTracking
             // 
-            this.mskDuitTracking.Location = new System.Drawing.Point(323, 158);
+            this.mskDuitTracking.Location = new System.Drawing.Point(215, 103);
+            this.mskDuitTracking.Margin = new System.Windows.Forms.Padding(2);
             this.mskDuitTracking.Mask = "00000000-0";
             this.mskDuitTracking.Name = "mskDuitTracking";
-            this.mskDuitTracking.Size = new System.Drawing.Size(187, 26);
+            this.mskDuitTracking.Size = new System.Drawing.Size(126, 20);
             this.mskDuitTracking.TabIndex = 5;
             this.mskDuitTracking.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -164,9 +171,10 @@ namespace Proyecto_BASES_POO_2021
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(37, 130);
+            this.pictureBox2.Location = new System.Drawing.Point(25, 84);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(46, 48);
+            this.pictureBox2.Size = new System.Drawing.Size(31, 31);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
@@ -175,9 +183,10 @@ namespace Proyecto_BASES_POO_2021
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(433, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(289, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(46, 48);
+            this.pictureBox1.Size = new System.Drawing.Size(31, 31);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -189,10 +198,11 @@ namespace Proyecto_BASES_POO_2021
             this.txt_citas.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txt_citas.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txt_citas.ForeColor = System.Drawing.Color.White;
-            this.txt_citas.Location = new System.Drawing.Point(487, 32);
+            this.txt_citas.Location = new System.Drawing.Point(325, 21);
+            this.txt_citas.Margin = new System.Windows.Forms.Padding(2);
             this.txt_citas.Name = "txt_citas";
             this.txt_citas.ReadOnly = true;
-            this.txt_citas.Size = new System.Drawing.Size(338, 37);
+            this.txt_citas.Size = new System.Drawing.Size(225, 25);
             this.txt_citas.TabIndex = 8;
             this.txt_citas.Text = "Seguimiento de citas";
             this.txt_citas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -203,9 +213,10 @@ namespace Proyecto_BASES_POO_2021
             this.btn_pdf_citas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_pdf_citas.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btn_pdf_citas.ForeColor = System.Drawing.Color.Black;
-            this.btn_pdf_citas.Location = new System.Drawing.Point(1099, 594);
+            this.btn_pdf_citas.Location = new System.Drawing.Point(702, 386);
+            this.btn_pdf_citas.Margin = new System.Windows.Forms.Padding(2);
             this.btn_pdf_citas.Name = "btn_pdf_citas";
-            this.btn_pdf_citas.Size = new System.Drawing.Size(137, 57);
+            this.btn_pdf_citas.Size = new System.Drawing.Size(119, 37);
             this.btn_pdf_citas.TabIndex = 9;
             this.btn_pdf_citas.Text = "Exportar a PDF";
             this.btn_pdf_citas.UseVisualStyleBackColor = false;
@@ -215,9 +226,10 @@ namespace Proyecto_BASES_POO_2021
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1034, 594);
+            this.pictureBox3.Location = new System.Drawing.Point(665, 391);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(49, 50);
+            this.pictureBox3.Size = new System.Drawing.Size(33, 32);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 10;
             this.pictureBox3.TabStop = false;
@@ -228,9 +240,10 @@ namespace Proyecto_BASES_POO_2021
             this.btn_proceso.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_proceso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btn_proceso.ForeColor = System.Drawing.Color.Black;
-            this.btn_proceso.Location = new System.Drawing.Point(562, 587);
+            this.btn_proceso.Location = new System.Drawing.Point(375, 382);
+            this.btn_proceso.Margin = new System.Windows.Forms.Padding(2);
             this.btn_proceso.Name = "btn_proceso";
-            this.btn_proceso.Size = new System.Drawing.Size(186, 64);
+            this.btn_proceso.Size = new System.Drawing.Size(124, 42);
             this.btn_proceso.TabIndex = 12;
             this.btn_proceso.Text = "Ir a proceso de vacunación";
             this.btn_proceso.UseVisualStyleBackColor = false;
@@ -240,9 +253,10 @@ namespace Proyecto_BASES_POO_2021
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(505, 594);
+            this.pictureBox4.Location = new System.Drawing.Point(337, 386);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(51, 50);
+            this.pictureBox4.Size = new System.Drawing.Size(34, 32);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 13;
             this.pictureBox4.TabStop = false;
@@ -253,9 +267,10 @@ namespace Proyecto_BASES_POO_2021
             this.btn_citaTracker.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_citaTracker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btn_citaTracker.ForeColor = System.Drawing.Color.Black;
-            this.btn_citaTracker.Location = new System.Drawing.Point(1031, 123);
+            this.btn_citaTracker.Location = new System.Drawing.Point(687, 80);
+            this.btn_citaTracker.Margin = new System.Windows.Forms.Padding(2);
             this.btn_citaTracker.Name = "btn_citaTracker";
-            this.btn_citaTracker.Size = new System.Drawing.Size(205, 62);
+            this.btn_citaTracker.Size = new System.Drawing.Size(137, 40);
             this.btn_citaTracker.TabIndex = 14;
             this.btn_citaTracker.Text = "Registrar cita";
             this.btn_citaTracker.UseVisualStyleBackColor = false;
@@ -265,9 +280,10 @@ namespace Proyecto_BASES_POO_2021
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(4, 22);
+            this.label1.Location = new System.Drawing.Point(3, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 38);
+            this.label1.Size = new System.Drawing.Size(127, 25);
             this.label1.TabIndex = 15;
             this.label1.Text = "Consentimiento:";
             // 
@@ -276,9 +292,11 @@ namespace Proyecto_BASES_POO_2021
             this.grpC.Controls.Add(this.radNoC2);
             this.grpC.Controls.Add(this.radSiC);
             this.grpC.Controls.Add(this.label1);
-            this.grpC.Location = new System.Drawing.Point(7, 490);
+            this.grpC.Location = new System.Drawing.Point(5, 318);
+            this.grpC.Margin = new System.Windows.Forms.Padding(2);
             this.grpC.Name = "grpC";
-            this.grpC.Size = new System.Drawing.Size(486, 70);
+            this.grpC.Padding = new System.Windows.Forms.Padding(2);
+            this.grpC.Size = new System.Drawing.Size(354, 45);
             this.grpC.TabIndex = 16;
             this.grpC.TabStop = false;
             // 
@@ -286,9 +304,10 @@ namespace Proyecto_BASES_POO_2021
             // 
             this.radNoC2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.radNoC2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.radNoC2.Location = new System.Drawing.Point(338, 18);
+            this.radNoC2.Location = new System.Drawing.Point(226, 11);
+            this.radNoC2.Margin = new System.Windows.Forms.Padding(2);
             this.radNoC2.Name = "radNoC2";
-            this.radNoC2.Size = new System.Drawing.Size(133, 46);
+            this.radNoC2.Size = new System.Drawing.Size(110, 30);
             this.radNoC2.TabIndex = 17;
             this.radNoC2.TabStop = true;
             this.radNoC2.Text = "No acepto";
@@ -298,9 +317,10 @@ namespace Proyecto_BASES_POO_2021
             // 
             this.radSiC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.radSiC.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.radSiC.Location = new System.Drawing.Point(211, 19);
+            this.radSiC.Location = new System.Drawing.Point(141, 12);
+            this.radSiC.Margin = new System.Windows.Forms.Padding(2);
             this.radSiC.Name = "radSiC";
-            this.radSiC.Size = new System.Drawing.Size(104, 45);
+            this.radSiC.Size = new System.Drawing.Size(69, 29);
             this.radSiC.TabIndex = 16;
             this.radSiC.TabStop = true;
             this.radSiC.Text = "Acepto";
@@ -327,7 +347,8 @@ namespace Proyecto_BASES_POO_2021
             this.dgvAppointment2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAppointment2.EnableHeadersVisualStyles = false;
             this.dgvAppointment2.GridColor = System.Drawing.Color.LightSeaGreen;
-            this.dgvAppointment2.Location = new System.Drawing.Point(0, 345);
+            this.dgvAppointment2.Location = new System.Drawing.Point(0, 224);
+            this.dgvAppointment2.Margin = new System.Windows.Forms.Padding(2);
             this.dgvAppointment2.Name = "dgvAppointment2";
             this.dgvAppointment2.ReadOnly = true;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -347,15 +368,33 @@ namespace Proyecto_BASES_POO_2021
             this.dgvAppointment2.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvAppointment2.RowTemplate.Height = 24;
             this.dgvAppointment2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAppointment2.Size = new System.Drawing.Size(1249, 116);
+            this.dgvAppointment2.Size = new System.Drawing.Size(833, 75);
             this.dgvAppointment2.TabIndex = 17;
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(637, 348);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 27);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Nombre del PDF:";
+            // 
+            // txt_pdfName
+            // 
+            this.txt_pdfName.Location = new System.Drawing.Point(704, 355);
+            this.txt_pdfName.Name = "txt_pdfName";
+            this.txt_pdfName.Size = new System.Drawing.Size(116, 20);
+            this.txt_pdfName.TabIndex = 19;
+            this.txt_pdfName.TextChanged += new System.EventHandler(this.txt_pdfName_TextChanged);
             // 
             // frm_appointment_tracking
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(1248, 663);
+            this.ClientSize = new System.Drawing.Size(832, 431);
+            this.Controls.Add(this.txt_pdfName);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvAppointment2);
             this.Controls.Add(this.grpC);
             this.Controls.Add(this.btn_citaTracker);
@@ -373,12 +412,12 @@ namespace Proyecto_BASES_POO_2021
             this.Controls.Add(this.btn_buscar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_appointment_tracking";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seguimiento de citas y cola de espera";
-            this.Load += new System.EventHandler(this.frm_appointment_tracking_Load);
             ((System.ComponentModel.ISupportInitialize) (this.dgvAppointment)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
@@ -389,6 +428,10 @@ namespace Proyecto_BASES_POO_2021
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.TextBox txt_pdfName;
+
+        private System.Windows.Forms.Label label2;
 
         private System.Windows.Forms.DataGridView dgvAppointment2;
 

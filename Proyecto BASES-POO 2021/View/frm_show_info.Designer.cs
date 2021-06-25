@@ -41,15 +41,16 @@ namespace Proyecto_BASES_POO_2021
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnExportPdf = new System.Windows.Forms.Button();
-            this.text_Lugar = new System.Windows.Forms.TextBox();
+            this.text_place = new System.Windows.Forms.TextBox();
             this.txtidcabin = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.txt_fecha = new System.Windows.Forms.TextBox();
+            this.txt_date = new System.Windows.Forms.TextBox();
             this.txtDuiShow = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.chkPriority = new System.Windows.Forms.CheckBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.txtPdfAppointmentName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).BeginInit();
@@ -152,15 +153,15 @@ namespace Proyecto_BASES_POO_2021
             this.btnExportPdf.UseVisualStyleBackColor = false;
             this.btnExportPdf.Click += new System.EventHandler(this.button1_Click);
             // 
-            // text_Lugar
+            // text_place
             // 
-            this.text_Lugar.Enabled = false;
-            this.text_Lugar.Location = new System.Drawing.Point(346, 255);
-            this.text_Lugar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.text_Lugar.Multiline = true;
-            this.text_Lugar.Name = "text_Lugar";
-            this.text_Lugar.Size = new System.Drawing.Size(242, 64);
-            this.text_Lugar.TabIndex = 18;
+            this.text_place.Enabled = false;
+            this.text_place.Location = new System.Drawing.Point(346, 255);
+            this.text_place.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.text_place.Multiline = true;
+            this.text_place.Name = "text_place";
+            this.text_place.Size = new System.Drawing.Size(242, 64);
+            this.text_place.TabIndex = 18;
             // 
             // txtidcabin
             // 
@@ -194,14 +195,14 @@ namespace Proyecto_BASES_POO_2021
             this.pictureBox4.TabIndex = 21;
             this.pictureBox4.TabStop = false;
             // 
-            // txt_fecha
+            // txt_date
             // 
-            this.txt_fecha.Enabled = false;
-            this.txt_fecha.Location = new System.Drawing.Point(346, 178);
-            this.txt_fecha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txt_fecha.Name = "txt_fecha";
-            this.txt_fecha.Size = new System.Drawing.Size(241, 26);
-            this.txt_fecha.TabIndex = 22;
+            this.txt_date.Enabled = false;
+            this.txt_date.Location = new System.Drawing.Point(346, 178);
+            this.txt_date.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_date.Name = "txt_date";
+            this.txt_date.Size = new System.Drawing.Size(241, 26);
+            this.txt_date.TabIndex = 22;
             // 
             // txtDuiShow
             // 
@@ -247,6 +248,15 @@ namespace Proyecto_BASES_POO_2021
             this.pictureBox5.TabIndex = 26;
             this.pictureBox5.TabStop = false;
             // 
+            // txtPdfAppointmentName
+            // 
+            this.txtPdfAppointmentName.Location = new System.Drawing.Point(712, 449);
+            this.txtPdfAppointmentName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPdfAppointmentName.Name = "txtPdfAppointmentName";
+            this.txtPdfAppointmentName.Size = new System.Drawing.Size(211, 26);
+            this.txtPdfAppointmentName.TabIndex = 27;
+            this.txtPdfAppointmentName.TextChanged += new System.EventHandler(this.txtPdfAppointmentName_TextChanged);
+            // 
             // frm_show_info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -255,15 +265,16 @@ namespace Proyecto_BASES_POO_2021
             this.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(936, 542);
+            this.Controls.Add(this.txtPdfAppointmentName);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.chkPriority);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtDuiShow);
-            this.Controls.Add(this.txt_fecha);
+            this.Controls.Add(this.txt_date);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtidcabin);
-            this.Controls.Add(this.text_Lugar);
+            this.Controls.Add(this.text_place);
             this.Controls.Add(this.btnExportPdf);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -290,6 +301,8 @@ namespace Proyecto_BASES_POO_2021
             this.PerformLayout();
         }
 
+        private System.Windows.Forms.TextBox txtPdfAppointmentName;
+
         private System.Windows.Forms.Button btnExportPdf;
 
         private System.Windows.Forms.PictureBox pictureBox5;
@@ -301,13 +314,13 @@ namespace Proyecto_BASES_POO_2021
 
         private System.Windows.Forms.TextBox txtidcabin;
 
-        private System.Windows.Forms.TextBox text_Lugar;
+        private System.Windows.Forms.TextBox text_place;
 
         private System.Windows.Forms.PictureBox pictureBox4;
 
         private System.Windows.Forms.Label label1;
 
-        private System.Windows.Forms.TextBox txt_fecha;
+        private System.Windows.Forms.TextBox txt_date;
 
 
         private System.Windows.Forms.PictureBox pictureBox2;

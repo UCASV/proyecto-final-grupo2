@@ -18,7 +18,8 @@ namespace Proyecto_BASES_POO_2021
         public frm_show_info(string ucitizen)
         {
             InitializeComponent();
-             txtDuiShow.Text = ucitizen;
+            txtDuiShow.Text = ucitizen;
+            btnExportPdf.Enabled = false;
              
         }
 
@@ -54,7 +55,7 @@ namespace Proyecto_BASES_POO_2021
                 select a.CabinAddress).FirstOrDefault();
             
             //muestra la informacion al gestor
-            text_Lugar.Text = query2;
+            text_place.Text = query2;
             txtidcabin.Text = randomCavin.ToString();
             
             System.Globalization.DateTimeFormatInfo dInfo = new System.Globalization.DateTimeFormatInfo();
@@ -81,7 +82,7 @@ namespace Proyecto_BASES_POO_2021
                 DateTime dtRan = dtMin.AddDays(rnDays);
                 //representacion en un textbox
             
-                txt_fecha.Text = dtRan.ToString("dd/MM/yyyy  hh:mm:ss tt");
+                txt_date.Text = dtRan.ToString("dd/MM/yyyy  hh:mm:ss tt");
                 
                 //Realiza la insercion de datos en la base
                var newAppointment = new Appointment()
@@ -113,10 +114,10 @@ namespace Proyecto_BASES_POO_2021
                 DateTime dtRan = dtMin.AddDays(rnDays);
                 //representacion en un textbox
             
-                txt_fecha.Text = dtRan.ToString("dd/MM/yyyy  hh:mm:ss tt");
+                txt_date.Text = dtRan.ToString("dd/MM/yyyy  hh:mm:ss tt");
 
                 //Realiza la insercion de datos en la base
-                //Quitar comentarios al realizar el waiting time
+                
                 var newAppointment = new Appointment()
                 {   
                     DuiC = txtDuiShow.Text,
@@ -133,21 +134,21 @@ namespace Proyecto_BASES_POO_2021
 
         private void button1_Click(object sender, EventArgs e)
         {   
-            
-            FileStream fs = new FileStream(@"C:\Users\USUARIO\Desktop\ProyectoBDPOO\PDFAppointment.pdf", FileMode.Create);
+            string folderPath = @"C:\Users\USUARIO\Desktop\ProyectoBDPOO\PDFAppointment\";
+            FileStream fs = new FileStream(folderPath + txtPdfAppointmentName.Text + ".pdf", FileMode.Create);
             Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f); 
             PdfWriter.GetInstance(pdfDoc, fs);
             pdfDoc.Open();
             
             //Fuente del pdf
-            iTextSharp.text.Font StandarFont = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 8,
+            iTextSharp.text.Font StandarFont = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 15,
                 iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
             
             //Encabezado
             pdfDoc.Add(new Paragraph("Informacion sobre su primera cita"));
             pdfDoc.Add(Chunk.NEWLINE);
 
-            PdfPTable tabl = new PdfPTable(4);
+            PdfPTable tabl = new PdfPTable(5);
             tabl.WidthPercentage = 100;
             
             //titulo de las columnas 
@@ -166,22 +167,30 @@ namespace Proyecto_BASES_POO_2021
             PdfPCell clCabin = new PdfPCell(new Phrase("Cabina", StandarFont));
             clCabin.BorderWidth = 0;
             clCabin.BorderWidthBottom = 0.75f;
-
+            
+            PdfPCell clPriority = new PdfPCell(new Phrase("Prioridad", StandarFont));
+            clPriority.BorderWidth = 0;
+            clPriority.BorderWidthBottom = 0.75f;
+            
+            //Se agrega los titulos
             tabl.AddCell(clDUI);
             tabl.AddCell(clAppointmentDate);
             tabl.AddCell(clPlace);
             tabl.AddCell(clCabin);
+            tabl.AddCell(clPriority);
 
-
+            //Llenando columnas
             clDUI = new PdfPCell(new Phrase(txtDuiShow.Text, StandarFont));
-            clAppointmentDate = new PdfPCell(new Phrase(txt_fecha.Text, StandarFont));
-            clPlace = new PdfPCell(new Phrase(text_Lugar.Text, StandarFont));
+            clAppointmentDate = new PdfPCell(new Phrase(txt_date.Text, StandarFont));
+            clPlace = new PdfPCell(new Phrase(text_place.Text, StandarFont));
             clCabin = new PdfPCell(new Phrase(txtidcabin.Text, StandarFont));
+            clPriority = new PdfPCell(new Phrase(chkPriority.Checked.ToString(), StandarFont));
             
             tabl.AddCell(clDUI);
             tabl.AddCell(clAppointmentDate);
             tabl.AddCell(clPlace);
             tabl.AddCell(clCabin);
+            tabl.AddCell(clPriority);
             
             pdfDoc.Add(tabl);
             pdfDoc.Close();
@@ -190,6 +199,18 @@ namespace Proyecto_BASES_POO_2021
             MessageBox.Show("PDF exportado correctamente!", "Gobierno de El Salvador",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+        }
+
+        private void txtPdfAppointmentName_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPdfAppointmentName.Text.Length > 0)
+            {
+                btnExportPdf.Enabled = true;
+            }
+            else if (txtPdfAppointmentName.Text.Length == 0)
+            {
+                btnExportPdf.Enabled = false;
+            }
         }
     }
     

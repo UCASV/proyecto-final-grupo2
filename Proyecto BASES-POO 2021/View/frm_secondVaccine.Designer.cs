@@ -33,7 +33,7 @@ namespace Proyecto_BASES_POO_2021
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_secondVaccine));
             this.txt_Place = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPdfExport = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -49,6 +49,7 @@ namespace Proyecto_BASES_POO_2021
             this.txt_cabin = new System.Windows.Forms.TextBox();
             this.txt_secondAppointment = new System.Windows.Forms.TextBox();
             this.chb_Priority = new System.Windows.Forms.CheckBox();
+            this.txtPdfName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
@@ -68,16 +69,17 @@ namespace Proyecto_BASES_POO_2021
             this.txt_Place.Size = new System.Drawing.Size(214, 57);
             this.txt_Place.TabIndex = 26;
             // 
-            // button1
+            // btnPdfExport
             // 
-            this.button1.BackColor = System.Drawing.Color.CadetBlue;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.button1.Location = new System.Drawing.Point(726, 471);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 43);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Convertir a PDF";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnPdfExport.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnPdfExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnPdfExport.Location = new System.Drawing.Point(730, 513);
+            this.btnPdfExport.Name = "btnPdfExport";
+            this.btnPdfExport.Size = new System.Drawing.Size(150, 43);
+            this.btnPdfExport.TabIndex = 25;
+            this.btnPdfExport.Text = "Convertir a PDF";
+            this.btnPdfExport.UseVisualStyleBackColor = false;
+            this.btnPdfExport.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox3
             // 
@@ -108,7 +110,7 @@ namespace Proyecto_BASES_POO_2021
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(675, 471);
+            this.pictureBox1.Location = new System.Drawing.Point(679, 513);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(45, 43);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -119,7 +121,7 @@ namespace Proyecto_BASES_POO_2021
             // 
             this.btn_aceptar.BackColor = System.Drawing.Color.CadetBlue;
             this.btn_aceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btn_aceptar.Location = new System.Drawing.Point(16, 471);
+            this.btn_aceptar.Location = new System.Drawing.Point(12, 513);
             this.btn_aceptar.Name = "btn_aceptar";
             this.btn_aceptar.Size = new System.Drawing.Size(142, 43);
             this.btn_aceptar.TabIndex = 21;
@@ -180,9 +182,9 @@ namespace Proyecto_BASES_POO_2021
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label2.Location = new System.Drawing.Point(36, 378);
+            this.label2.Location = new System.Drawing.Point(36, 367);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(228, 83);
+            this.label2.Size = new System.Drawing.Size(228, 49);
             this.label2.TabIndex = 30;
             this.label2.Text = "Cabina:";
             // 
@@ -242,13 +244,24 @@ namespace Proyecto_BASES_POO_2021
             this.chb_Priority.Text = "Prioridad";
             this.chb_Priority.UseVisualStyleBackColor = false;
             // 
+            // txtPdfName
+            // 
+            this.txtPdfName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPdfName.Location = new System.Drawing.Point(679, 479);
+            this.txtPdfName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPdfName.Name = "txtPdfName";
+            this.txtPdfName.Size = new System.Drawing.Size(201, 26);
+            this.txtPdfName.TabIndex = 36;
+            this.txtPdfName.TextChanged += new System.EventHandler(this.txtPdfName_TextChanged);
+            // 
             // frm_secondVaccine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(892, 531);
+            this.ClientSize = new System.Drawing.Size(892, 568);
+            this.Controls.Add(this.txtPdfName);
             this.Controls.Add(this.chb_Priority);
             this.Controls.Add(this.txt_secondAppointment);
             this.Controls.Add(this.txt_cabin);
@@ -258,7 +271,7 @@ namespace Proyecto_BASES_POO_2021
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_citizenDUI);
             this.Controls.Add(this.txt_Place);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnPdfExport);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -281,6 +294,9 @@ namespace Proyecto_BASES_POO_2021
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Button btnPdfExport;
+        private System.Windows.Forms.TextBox txtPdfName;
 
         private System.Windows.Forms.TextBox txt_Place;
         private System.Windows.Forms.CheckBox chb_Priority;

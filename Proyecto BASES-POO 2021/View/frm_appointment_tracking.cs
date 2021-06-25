@@ -16,7 +16,7 @@ namespace Proyecto_BASES_POO_2021
         public frm_appointment_tracking()
         {
             InitializeComponent();
-            
+            btn_pdf_citas.Enabled = false;
         }
 
         private void dataview()
@@ -39,7 +39,7 @@ namespace Proyecto_BASES_POO_2021
             {
                 if (!showFromDBB)
                 {   
-                    //Llena el primer dgv
+                    //Llena el Primer dgv
                     var citizen = db.CitizenForms.ToList();
                     var mappedDSs = new List<CitizenFormVm>();
                     foreach (var item in citizen.Where(i => i.DuiC == mskDuitTracking.Text ))
@@ -48,7 +48,7 @@ namespace Proyecto_BASES_POO_2021
                     }
                     dgvAppointment.DataSource = mappedDSs;
                     
-                    //Llena el primer dgv
+                    //Llena el Segundo dgv
                     var appointmentss = db.Appointments.ToList();
                     var mappedDSss = new List<AppointmentVm>();
                     foreach (var items in appointmentss.Where(i => i.DuiC == mskDuitTracking.Text ))
@@ -131,13 +131,7 @@ namespace Proyecto_BASES_POO_2021
             windowsSingIn.ShowDialog();
             this.Show();
         }
-
-
-        private void frm_appointment_tracking_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void btn_pdf_citas_Click(object sender, EventArgs e)
         {
             PdfPTable pdfTable = new PdfPTable(dgvAppointment2.ColumnCount);
@@ -159,19 +153,39 @@ namespace Proyecto_BASES_POO_2021
             }
  
             //Exporting to PDF
-            string folderPath = @"C:\Users\USUARIO\Desktop\ProyectoBDPOO\PDFAppointment";
+            string folderPath =  @"C:\Users\USUARIO\Desktop\ProyectoBDPOO\PDFAppointment\";
             
-            using (FileStream stream = new FileStream(folderPath + "Info.pdf", FileMode.Create))
+            using (FileStream stream = new FileStream(folderPath + txt_pdfName.Text + ".pdf", FileMode.Create))
             {
                 Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f);
                 PdfWriter.GetInstance(pdfDoc, stream);
+
                 pdfDoc.Open();
+                
+                pdfDoc.Add(new Paragraph("Informacion sobre citas"));
+                pdfDoc.Add(Chunk.NEWLINE);
+                
                 pdfDoc.Add(pdfTable);
                 pdfDoc.Close();
                 stream.Close();
                 MessageBox.Show("PDF exportado correctamente!", "Gobierno de El Salvador",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txt_pdfName.Text = "";
+            }
+
+            
+        }
+        
+        private void txt_pdfName_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_pdfName.Text.Length > 0)
+            {
+                btn_pdf_citas.Enabled = true;
+            }
+            else if (txt_pdfName.Text.Length == 0)
+            {
+                btn_pdf_citas.Enabled = false;
             }
         }
-        }
+    }
 }

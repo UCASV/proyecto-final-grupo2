@@ -2,6 +2,9 @@
 using System.Linq;
 using System.Windows.Forms;
 using Proyecto_BASES_POO_2021.ProjectContext;
+using System.IO;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
 
 namespace Proyecto_BASES_POO_2021
 {
@@ -17,6 +20,7 @@ namespace Proyecto_BASES_POO_2021
             txt_cabin.Enabled = false;
             chb_Priority.Enabled = false;
             txt_secondAppointment.Enabled = false;
+            btnPdfExport.Enabled = false;
         }
 
         private void frm_secondVaccine_Load(object sender, EventArgs e)
@@ -131,6 +135,86 @@ namespace Proyecto_BASES_POO_2021
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string folderPath = @"C:\Users\USUARIO\Desktop\ProyectoBDPOO\PDFAppointment\";
+            FileStream fs = new FileStream(folderPath + txtPdfName.Text + ".pdf", FileMode.Create);
+            Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f); 
+            PdfWriter.GetInstance(pdfDoc, fs);
+            pdfDoc.Open();
+            
+            //Fuente del pdf
+            iTextSharp.text.Font StandarFont = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 15,
+                iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
+            
+            //Encabezado
+            pdfDoc.Add(new Paragraph("Informacion sobre su segunda cita"));
+            pdfDoc.Add(Chunk.NEWLINE);
+
+            PdfPTable tabl = new PdfPTable(5);
+            tabl.WidthPercentage = 100;
+            
+            //titulo de las columnas 
+            PdfPCell clDUI = new PdfPCell(new Phrase("DUI", StandarFont));
+            clDUI.BorderWidth = 0;
+            clDUI.BorderWidthBottom = 0.75f;
+            
+            PdfPCell clAppointmentDate = new PdfPCell(new Phrase("Fecha", StandarFont));
+            clAppointmentDate.BorderWidth = 0;
+            clAppointmentDate.BorderWidthBottom = 0.75f;
+            
+            PdfPCell clPlace = new PdfPCell(new Phrase("Lugar", StandarFont));
+            clPlace.BorderWidth = 0;
+            clPlace.BorderWidthBottom = 0.75f;
+            
+            PdfPCell clCabin = new PdfPCell(new Phrase("Cabina", StandarFont));
+            clCabin.BorderWidth = 0;
+            clCabin.BorderWidthBottom = 0.75f;
+            
+            PdfPCell clPriority = new PdfPCell(new Phrase("Prioridad", StandarFont));
+            clPriority.BorderWidth = 0;
+            clPriority.BorderWidthBottom = 0.75f;
+            
+            //Se agrega los titulos
+            tabl.AddCell(clDUI);
+            tabl.AddCell(clAppointmentDate);
+            tabl.AddCell(clPlace);
+            tabl.AddCell(clCabin);
+            tabl.AddCell(clPriority);
+
+            //Llenando columnas
+            clDUI = new PdfPCell(new Phrase(txt_citizenDUI.Text, StandarFont));
+            clAppointmentDate = new PdfPCell(new Phrase(txt_secondAppointment.Text, StandarFont));
+            clPlace = new PdfPCell(new Phrase(txt_Place.Text, StandarFont));
+            clCabin = new PdfPCell(new Phrase(txt_cabin.Text, StandarFont));
+            clPriority = new PdfPCell(new Phrase(chb_Priority.Checked.ToString(), StandarFont));
+            
+            tabl.AddCell(clDUI);
+            tabl.AddCell(clAppointmentDate);
+            tabl.AddCell(clPlace);
+            tabl.AddCell(clCabin);
+            tabl.AddCell(clPriority);
+            
+            pdfDoc.Add(tabl);
+            pdfDoc.Close();
+            fs.Close();
+            
+            MessageBox.Show("PDF creado y exportado correctamente!", "Gobierno de El Salvador",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void txtPdfName_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPdfName.Text.Length > 0)
+            {
+                btnPdfExport.Enabled = true;
+            }
+            else if (txtPdfName.Text.Length == 0)
+            {
+                btnPdfExport.Enabled = false;
+            }
         }
     }
 }
