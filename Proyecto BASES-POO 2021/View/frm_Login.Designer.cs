@@ -238,14 +238,15 @@
             this.Controls.Add(this.LabelBienvenido);
             this.Controls.Add(this.botonIniciarS);
             this.Controls.Add(this.pictureBox1);
-            this.Load += new System.EventHandler(this.frm_Login_Load);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.frm_Login_Load);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox4)).EndInit();

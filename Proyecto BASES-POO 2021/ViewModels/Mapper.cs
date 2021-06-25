@@ -28,12 +28,23 @@ namespace Proyecto_BASES_POO_2021.viewModels
             {
                 DuiC = c.DuiC,
                 CitizenName = c.CitizenName,
-                FirstVaccineDate = c.FirstVaccineDate,
                 CitizenAddress = c.CitizenAddress,
                 Telephone = c.Telephone,
                 CitizenEmail = c.CitizenEmail,
                 IdInstitution = c.IdInstitution,
                 PriorityGroup =c.PriorityGroup
+            };
+        }
+        
+        public static AppointmentVm MapAppointmentVm(Appointment a)
+        {
+            return new AppointmentVm()
+            {
+               IdAppontiment = a.IdAppontiment,
+               DuiC = a.DuiC,
+               IdCabin =  a.IdCabin,
+               AppointmentDate = a.AppointmentDate,
+               AppointmentAddress = a.AppointmentAddress
             };
         }
         

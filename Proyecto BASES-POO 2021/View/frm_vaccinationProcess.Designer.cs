@@ -33,12 +33,15 @@ namespace Proyecto_BASES_POO_2021
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_vaccinationProcess));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblCountAppoint = new System.Windows.Forms.Label();
+            this.txtAppointmentCount = new System.Windows.Forms.TextBox();
             this.txtSideEfeccts = new System.Windows.Forms.TextBox();
             this.txtPatientProcess = new System.Windows.Forms.TextBox();
             this.lblSide_effects = new System.Windows.Forms.Label();
             this.lblPatientProcess = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_second = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnacceptarVaccine = new System.Windows.Forms.Button();
             this.lblDateVaccine = new System.Windows.Forms.Label();
@@ -53,16 +56,36 @@ namespace Proyecto_BASES_POO_2021
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (1)))), ((int) (((byte) (147)))), ((int) (((byte) (204)))));
+            this.panel2.Controls.Add(this.lblCountAppoint);
+            this.panel2.Controls.Add(this.txtAppointmentCount);
             this.panel2.Controls.Add(this.txtSideEfeccts);
             this.panel2.Controls.Add(this.txtPatientProcess);
             this.panel2.Location = new System.Drawing.Point(166, 349);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(365, 263);
+            this.panel2.Size = new System.Drawing.Size(383, 263);
             this.panel2.TabIndex = 1;
+            // 
+            // lblCountAppoint
+            // 
+            this.lblCountAppoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lblCountAppoint.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblCountAppoint.Location = new System.Drawing.Point(183, 26);
+            this.lblCountAppoint.Name = "lblCountAppoint";
+            this.lblCountAppoint.Size = new System.Drawing.Size(101, 31);
+            this.lblCountAppoint.TabIndex = 16;
+            this.lblCountAppoint.Text = "Nº Cita:";
+            // 
+            // txtAppointmentCount
+            // 
+            this.txtAppointmentCount.Enabled = false;
+            this.txtAppointmentCount.Location = new System.Drawing.Point(305, 29);
+            this.txtAppointmentCount.Name = "txtAppointmentCount";
+            this.txtAppointmentCount.Size = new System.Drawing.Size(33, 26);
+            this.txtAppointmentCount.TabIndex = 4;
             // 
             // txtSideEfeccts
             // 
-            this.txtSideEfeccts.Location = new System.Drawing.Point(23, 75);
+            this.txtSideEfeccts.Location = new System.Drawing.Point(22, 75);
             this.txtSideEfeccts.Multiline = true;
             this.txtSideEfeccts.Name = "txtSideEfeccts";
             this.txtSideEfeccts.Size = new System.Drawing.Size(331, 152);
@@ -71,16 +94,16 @@ namespace Proyecto_BASES_POO_2021
             // txtPatientProcess
             // 
             this.txtPatientProcess.Enabled = false;
-            this.txtPatientProcess.Location = new System.Drawing.Point(23, 29);
+            this.txtPatientProcess.Location = new System.Drawing.Point(22, 29);
             this.txtPatientProcess.Name = "txtPatientProcess";
-            this.txtPatientProcess.Size = new System.Drawing.Size(172, 26);
+            this.txtPatientProcess.Size = new System.Drawing.Size(141, 26);
             this.txtPatientProcess.TabIndex = 0;
             // 
             // lblSide_effects
             // 
             this.lblSide_effects.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblSide_effects.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblSide_effects.Location = new System.Drawing.Point(12, 77);
+            this.lblSide_effects.Location = new System.Drawing.Point(12, 75);
             this.lblSide_effects.Name = "lblSide_effects";
             this.lblSide_effects.Size = new System.Drawing.Size(148, 63);
             this.lblSide_effects.TabIndex = 2;
@@ -92,7 +115,7 @@ namespace Proyecto_BASES_POO_2021
             this.lblPatientProcess.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.lblPatientProcess.Location = new System.Drawing.Point(12, 26);
             this.lblPatientProcess.Name = "lblPatientProcess";
-            this.lblPatientProcess.Size = new System.Drawing.Size(119, 31);
+            this.lblPatientProcess.Size = new System.Drawing.Size(118, 31);
             this.lblPatientProcess.TabIndex = 1;
             this.lblPatientProcess.Text = "Paciente:";
             // 
@@ -100,22 +123,37 @@ namespace Proyecto_BASES_POO_2021
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(1, 0);
+            this.panel1.Location = new System.Drawing.Point(2, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(937, 349);
+            this.panel1.Size = new System.Drawing.Size(965, 349);
             this.panel1.TabIndex = 2;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (1)))), ((int) (((byte) (102)))), ((int) (((byte) (180)))));
+            this.panel3.Controls.Add(this.btn_second);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.btnacceptarVaccine);
             this.panel3.Controls.Add(this.lblDateVaccine);
             this.panel3.Controls.Add(this.dtpFirstDateVaccine);
-            this.panel3.Location = new System.Drawing.Point(526, 349);
+            this.panel3.Location = new System.Drawing.Point(547, 349);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(411, 263);
+            this.panel3.Size = new System.Drawing.Size(420, 263);
             this.panel3.TabIndex = 3;
+            // 
+            // btn_second
+            // 
+            this.btn_second.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (132)))), ((int) (((byte) (165)))));
+            this.btn_second.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_second.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btn_second.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_second.Location = new System.Drawing.Point(28, 192);
+            this.btn_second.Name = "btn_second";
+            this.btn_second.Size = new System.Drawing.Size(174, 63);
+            this.btn_second.TabIndex = 18;
+            this.btn_second.Text = "Crear segunda cita";
+            this.btn_second.UseVisualStyleBackColor = false;
+            this.btn_second.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button2_MouseClick);
             // 
             // button1
             // 
@@ -123,9 +161,9 @@ namespace Proyecto_BASES_POO_2021
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(29, 127);
+            this.button1.Location = new System.Drawing.Point(28, 128);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(320, 35);
+            this.button1.Size = new System.Drawing.Size(368, 35);
             this.button1.TabIndex = 17;
             this.button1.Text = "Obtener fecha y hora actual";
             this.button1.UseVisualStyleBackColor = false;
@@ -137,7 +175,7 @@ namespace Proyecto_BASES_POO_2021
             this.btnacceptarVaccine.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnacceptarVaccine.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnacceptarVaccine.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnacceptarVaccine.Location = new System.Drawing.Point(269, 212);
+            this.btnacceptarVaccine.Location = new System.Drawing.Point(268, 212);
             this.btnacceptarVaccine.Name = "btnacceptarVaccine";
             this.btnacceptarVaccine.Size = new System.Drawing.Size(128, 43);
             this.btnacceptarVaccine.TabIndex = 16;
@@ -149,17 +187,17 @@ namespace Proyecto_BASES_POO_2021
             // 
             this.lblDateVaccine.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblDateVaccine.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblDateVaccine.Location = new System.Drawing.Point(29, 24);
+            this.lblDateVaccine.Location = new System.Drawing.Point(28, 25);
             this.lblDateVaccine.Name = "lblDateVaccine";
-            this.lblDateVaccine.Size = new System.Drawing.Size(320, 56);
+            this.lblDateVaccine.Size = new System.Drawing.Size(368, 55);
             this.lblDateVaccine.TabIndex = 2;
             this.lblDateVaccine.Text = "Fecha de aplicacion de la vacuna:";
             // 
             // dtpFirstDateVaccine
             // 
-            this.dtpFirstDateVaccine.Location = new System.Drawing.Point(29, 83);
+            this.dtpFirstDateVaccine.Location = new System.Drawing.Point(28, 83);
             this.dtpFirstDateVaccine.Name = "dtpFirstDateVaccine";
-            this.dtpFirstDateVaccine.Size = new System.Drawing.Size(320, 26);
+            this.dtpFirstDateVaccine.Size = new System.Drawing.Size(368, 26);
             this.dtpFirstDateVaccine.TabIndex = 0;
             // 
             // panel4
@@ -192,12 +230,13 @@ namespace Proyecto_BASES_POO_2021
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(935, 616);
+            this.ClientSize = new System.Drawing.Size(969, 615);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_vaccinationProcess";
@@ -209,6 +248,11 @@ namespace Proyecto_BASES_POO_2021
             this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.TextBox txtAppointmentCount;
+        private System.Windows.Forms.Label lblCountAppoint;
+
+        private System.Windows.Forms.Button btn_second;
 
         private System.Windows.Forms.Button btnVolver_vaccine;
         private System.Windows.Forms.Button btnacceptarVaccine;

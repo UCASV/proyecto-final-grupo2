@@ -70,6 +70,8 @@ namespace Proyecto_BASES_POO_2021
             this.radNo1 = new System.Windows.Forms.RadioButton();
             this.lblhealthP = new System.Windows.Forms.Label();
             this.lblRellenar = new System.Windows.Forms.Label();
+            this.txtCronicDisease = new System.Windows.Forms.TextBox();
+            this.lblChronicDisease = new System.Windows.Forms.Label();
             this.pnl_doc_ctzn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.pic_wave_ctzn)).BeginInit();
             this.pnl_left_ctzn.SuspendLayout();
@@ -105,6 +107,8 @@ namespace Proyecto_BASES_POO_2021
             // pnl_left_ctzn
             // 
             this.pnl_left_ctzn.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (8)))), ((int) (((byte) (31)))), ((int) (((byte) (46)))));
+            this.pnl_left_ctzn.Controls.Add(this.lblChronicDisease);
+            this.pnl_left_ctzn.Controls.Add(this.txtCronicDisease);
             this.pnl_left_ctzn.Controls.Add(this.panel1);
             this.pnl_left_ctzn.Controls.Add(this.cmbInstitution);
             this.pnl_left_ctzn.Controls.Add(this.lblInstitution);
@@ -505,6 +509,25 @@ namespace Proyecto_BASES_POO_2021
             this.lblRellenar.TabIndex = 0;
             this.lblRellenar.Text = "Rellenar";
             // 
+            // txtCronicDisease
+            // 
+            this.txtCronicDisease.Location = new System.Drawing.Point(556, 249);
+            this.txtCronicDisease.Multiline = true;
+            this.txtCronicDisease.Name = "txtCronicDisease";
+            this.txtCronicDisease.Size = new System.Drawing.Size(316, 123);
+            this.txtCronicDisease.TabIndex = 18;
+            // 
+            // lblChronicDisease
+            // 
+            this.lblChronicDisease.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lblChronicDisease.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblChronicDisease.Location = new System.Drawing.Point(556, 179);
+            this.lblChronicDisease.Name = "lblChronicDisease";
+            this.lblChronicDisease.Size = new System.Drawing.Size(314, 62);
+            this.lblChronicDisease.TabIndex = 19;
+            this.lblChronicDisease.Text = "¿Padece de alguna enfermedad crónica?";
+            this.lblChronicDisease.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // frm_citizen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -533,7 +556,11 @@ namespace Proyecto_BASES_POO_2021
             this.grpQuestion1_ctzn.ResumeLayout(false);
             this.ResumeLayout(false);
         }
-        
+
+        private System.Windows.Forms.Label lblChronicDisease;
+
+        private System.Windows.Forms.TextBox txtCronicDisease;
+
 
         private System.Windows.Forms.ComboBox cmbInstitution;
 

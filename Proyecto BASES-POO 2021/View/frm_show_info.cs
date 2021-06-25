@@ -44,6 +44,7 @@ namespace Proyecto_BASES_POO_2021
             Random rnd = new Random();
             //genera un numero aleatorio dentro del rango de numero de cabinas que hay en la base
             var randomCavin = rnd.Next(1, listacabinas.Count + 1) ;
+            
             //selecciona una dirección en base al numero aleatorio obtenido anteriormente
             var query2 = (from a in db.Cabins
                 where a.IdCabin == randomCavin  
@@ -80,14 +81,15 @@ namespace Proyecto_BASES_POO_2021
                 txt_fecha.Text = dtRan.ToString("dd/MM/yyyy  hh:mm:ss tt");
                 
                 //Realiza la insercion de datos en la base
-               /* var newAppointment = new Appointment()
+               var newAppointment = new Appointment()
                 {   
                     DuiC = txtDuiShow.Text,
                     IdCabin = randomCavin,
                     AppointmentAddress =  query2,
-                    AppointmentDate = dtRan,
-                    WaitingTime = ,
-                };*/
+                    AppointmentDate = dtRan
+                };
+               db.Add(newAppointment);
+               db.SaveChanges();
 
             }
             else
@@ -112,14 +114,15 @@ namespace Proyecto_BASES_POO_2021
 
                 //Realiza la insercion de datos en la base
                 //Quitar comentarios al realizar el waiting time
-                /*var newAppointment = new Appointment()
+                var newAppointment = new Appointment()
                 {   
                     DuiC = txtDuiShow.Text,
                     IdCabin = randomCavin,
                     AppointmentAddress =  query2,
-                    AppointmentDate = dtRan,
-                    WaitingTime = ,
-                };*/
+                    AppointmentDate = dtRan
+                };
+                db.Add(newAppointment);
+                db.SaveChanges();
 
             }
             

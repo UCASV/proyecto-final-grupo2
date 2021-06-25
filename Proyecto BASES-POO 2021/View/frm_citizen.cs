@@ -61,11 +61,10 @@ namespace Proyecto_BASES_POO_2021
                         priority = true;
                     else
                         priority = false;
-                   //Insercion de datos en la base
+                   //Insercion de datos del ciudadano en la base
                     var newCitizen = new CitizenForm{
                     
                     DuiC = msktxt_dui_ctzn.Text,
-                    FirstVaccineDate = DateTime.Now,
                     CitizenName = txtNombre_ctzn.Text,
                     CitizenAddress = txtAdress_ctzn.Text,
                     Telephone = msktxt_phone_ctzn.Text,
@@ -73,7 +72,16 @@ namespace Proyecto_BASES_POO_2021
                     IdInstitution = cmbInstitution.SelectedIndex + 1,
                     PriorityGroup = priority
                     };
+                    
                     db.Add(newCitizen);
+                    db.SaveChanges();
+                    //Insercion de enfermedades cronicas del ciudadano en la base en la base
+                    var newCronicDisease = new ChronicDisease
+                    {
+                        DuiC = msktxt_dui_ctzn.Text,
+                        DiseaseName = txtCronicDisease.Text
+                    };
+                    db.Add(newCronicDisease);
                     db.SaveChanges();
                     //Le avisa al usuario de la plataforma que la insercion se ha realizado correctamente    
                     MessageBox.Show("Ciudadano registrado exitosamente!", "Gobierno de El Salvador",

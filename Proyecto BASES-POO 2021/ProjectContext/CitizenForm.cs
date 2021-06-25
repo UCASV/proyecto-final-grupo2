@@ -11,12 +11,11 @@ namespace Proyecto_BASES_POO_2021.ProjectContext
         {
             Appointments = new HashSet<Appointment>();
             ChronicDiseases = new HashSet<ChronicDisease>();
-            SideEffectsNavigation = new HashSet<SideEffect>();
+            SideEffects = new HashSet<SideEffect>();
         }
 
         public string DuiC { get; set; }
-        public DateTime FirstVaccineDate { get; set; }
-        public string SideEffects { get; set; }
+        public DateTime? VaccineDate { get; set; }
         public string CitizenAddress { get; set; }
         public string CitizenName { get; set; }
         public string Telephone { get; set; }
@@ -27,6 +26,6 @@ namespace Proyecto_BASES_POO_2021.ProjectContext
         public virtual Institution IdInstitutionNavigation { get; set; }
         public virtual ICollection<Appointment> Appointments { get; set; }
         public virtual ICollection<ChronicDisease> ChronicDiseases { get; set; }
-        public virtual ICollection<SideEffect> SideEffectsNavigation { get; set; }
+        public virtual ICollection<SideEffect> SideEffects { get; set; }
     }
 }

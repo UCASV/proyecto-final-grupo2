@@ -43,7 +43,7 @@ namespace Proyecto_BASES_POO_2021.ProjectContext
             modelBuilder.Entity<Appointment>(entity =>
             {
                 entity.HasKey(e => e.IdAppontiment)
-                    .HasName("PK__APPOINTM__DC555EAA6CD842DC");
+                    .HasName("PK__APPOINTM__DC555EAA21898D07");
 
                 entity.ToTable("APPOINTMENT");
 
@@ -87,7 +87,7 @@ namespace Proyecto_BASES_POO_2021.ProjectContext
             modelBuilder.Entity<Cabin>(entity =>
             {
                 entity.HasKey(e => e.IdCabin)
-                    .HasName("PK__CABIN__CFA1AA9A2A644876");
+                    .HasName("PK__CABIN__CFA1AA9ABD6460A9");
 
                 entity.ToTable("CABIN");
 
@@ -123,14 +123,13 @@ namespace Proyecto_BASES_POO_2021.ProjectContext
             modelBuilder.Entity<ChronicDisease>(entity =>
             {
                 entity.HasKey(e => e.IdCronicDisease)
-                    .HasName("PK__CHRONIC___DB6169DF72ADB2B7");
+                    .HasName("PK__CHRONIC___DB6169DF88D26524");
 
                 entity.ToTable("CHRONIC_DISEASE");
 
                 entity.Property(e => e.IdCronicDisease).HasColumnName("id_cronic_disease");
 
                 entity.Property(e => e.DiseaseName)
-                    .IsRequired()
                     .HasMaxLength(75)
                     .IsUnicode(false)
                     .HasColumnName("disease_name");
@@ -151,7 +150,7 @@ namespace Proyecto_BASES_POO_2021.ProjectContext
             modelBuilder.Entity<CitizenForm>(entity =>
             {
                 entity.HasKey(e => e.DuiC)
-                    .HasName("PK__CITIZEN___86F4ECD78C14B655");
+                    .HasName("PK__CITIZEN___86F4ECD7D9D34516");
 
                 entity.ToTable("CITIZEN_FORM");
 
@@ -177,24 +176,19 @@ namespace Proyecto_BASES_POO_2021.ProjectContext
                     .IsUnicode(false)
                     .HasColumnName("citizen_name");
 
-                entity.Property(e => e.FirstVaccineDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("first_vaccine_date");
-
                 entity.Property(e => e.IdInstitution).HasColumnName("id_institution");
 
                 entity.Property(e => e.PriorityGroup).HasColumnName("priority_group");
-
-                entity.Property(e => e.SideEffects)
-                    .HasMaxLength(400)
-                    .IsUnicode(false)
-                    .HasColumnName("side_effects");
 
                 entity.Property(e => e.Telephone)
                     .IsRequired()
                     .HasMaxLength(9)
                     .IsUnicode(false)
                     .HasColumnName("telephone");
+
+                entity.Property(e => e.VaccineDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("vaccine_date");
 
                 entity.HasOne(d => d.IdInstitutionNavigation)
                     .WithMany(p => p.CitizenForms)
@@ -206,7 +200,7 @@ namespace Proyecto_BASES_POO_2021.ProjectContext
             modelBuilder.Entity<Institution>(entity =>
             {
                 entity.HasKey(e => e.IdInstitution)
-                    .HasName("PK__INSTITUT__512A185C6C1228A1");
+                    .HasName("PK__INSTITUT__512A185C1788E608");
 
                 entity.ToTable("INSTITUTION");
 
@@ -222,7 +216,7 @@ namespace Proyecto_BASES_POO_2021.ProjectContext
             modelBuilder.Entity<Manager>(entity =>
             {
                 entity.HasKey(e => e.IdManager)
-                    .HasName("PK__MANAGER__7F9D5D0021C9E65B");
+                    .HasName("PK__MANAGER__7F9D5D00D2244DF0");
 
                 entity.ToTable("MANAGER");
 
@@ -270,7 +264,7 @@ namespace Proyecto_BASES_POO_2021.ProjectContext
             modelBuilder.Entity<SessionU>(entity =>
             {
                 entity.HasKey(e => e.IdSession)
-                    .HasName("PK__SESSION___A9E494D0B341B202");
+                    .HasName("PK__SESSION___A9E494D0EDE2F973");
 
                 entity.ToTable("SESSION_U");
 
@@ -300,7 +294,7 @@ namespace Proyecto_BASES_POO_2021.ProjectContext
             modelBuilder.Entity<SideEffect>(entity =>
             {
                 entity.HasKey(e => e.IdSideEffects)
-                    .HasName("PK__SIDE_EFF__6772C9E3F4437402");
+                    .HasName("PK__SIDE_EFF__6772C9E379D5F2BD");
 
                 entity.ToTable("SIDE_EFFECTS");
 
@@ -318,7 +312,7 @@ namespace Proyecto_BASES_POO_2021.ProjectContext
                     .HasColumnName("side_effects_name");
 
                 entity.HasOne(d => d.DuiCNavigation)
-                    .WithMany(p => p.SideEffectsNavigation)
+                    .WithMany(p => p.SideEffects)
                     .HasForeignKey(d => d.DuiC)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__SIDE_EFFE__dui_c__4AB81AF0");
@@ -327,7 +321,7 @@ namespace Proyecto_BASES_POO_2021.ProjectContext
             modelBuilder.Entity<TypeEmployee>(entity =>
             {
                 entity.HasKey(e => e.IdTypeEmployee)
-                    .HasName("PK__TYPE_EMP__9DBD5396C0859608");
+                    .HasName("PK__TYPE_EMP__9DBD5396069D0EB6");
 
                 entity.ToTable("TYPE_EMPLOYEE");
 

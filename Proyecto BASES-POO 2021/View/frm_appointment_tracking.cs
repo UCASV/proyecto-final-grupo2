@@ -34,16 +34,24 @@ namespace Proyecto_BASES_POO_2021
             else
             {
                 if (!showFromDBB)
-                {
+                {   
+                    //Llena el primer dgv
                     var citizen = db.CitizenForms.ToList();
                     var mappedDSs = new List<CitizenFormVm>();
                     foreach (var item in citizen.Where(i => i.DuiC == maskedTextBox1.Text ))
                     {
                         mappedDSs.Add(ProjectMapper.MapCitizenFormVm(item));
                     }
-                        
                     dgvAppointment.DataSource = mappedDSs;
                     
+                    //Llena el primer dgv
+                    var appointmentss = db.Appointments.ToList();
+                    var mappedDSss = new List<AppointmentVm>();
+                    foreach (var items in appointmentss.Where(i => i.DuiC == maskedTextBox1.Text ))
+                    {
+                        mappedDSss.Add(ProjectMapper.MapAppointmentVm(items));
+                    }
+                    dgvAppointment2.DataSource = mappedDSss;
                 } 
             }
             
@@ -53,7 +61,11 @@ namespace Proyecto_BASES_POO_2021
         {
             this.Close();
         }
-
+           
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            dataview();
+        }
 
         private void btn_proceso_Click(object sender, EventArgs e)
         {   
@@ -80,21 +92,19 @@ namespace Proyecto_BASES_POO_2021
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
-            {
-                this.Hide();
-                frm_vaccinationProcess vaccinationProcesss = new frm_vaccinationProcess(maskedTextBox1.Text);
-                vaccinationProcesss.ShowDialog();
-                this.Hide();
+            {   
+                //Cuenta las filas que hay en el dgv para pasarlas al otro form
+                var rows = dgvAppointment2.RowCount;
+                    this.Hide();
+                    frm_vaccinationProcess vaccinationProcesss = new frm_vaccinationProcess(maskedTextBox1.Text, rows);
+                    vaccinationProcesss.ShowDialog();
+                    this.Show();
             }
-        }
-
-        private void btn_buscar_Click(object sender, EventArgs e)
-        {
-            dataview();
         }
 
         private void btn_citaTracker_Click(object sender, EventArgs e)
         {   
+            //Lleva al formulario para iniciar el proceso de realizar cita
             this.Hide();
             frm_citizen windowsSingIn = new frm_citizen();
             windowsSingIn.ShowDialog();

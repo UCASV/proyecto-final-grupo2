@@ -97,12 +97,12 @@ namespace Proyecto_BASES_POO_2021
             // 
             this.lbl_employeeInfo.BackColor = System.Drawing.Color.Transparent;
             this.lbl_employeeInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lbl_employeeInfo.Location = new System.Drawing.Point(399, 34);
+            this.lbl_employeeInfo.Location = new System.Drawing.Point(354, 34);
             this.lbl_employeeInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_employeeInfo.Name = "lbl_employeeInfo";
-            this.lbl_employeeInfo.Size = new System.Drawing.Size(452, 48);
+            this.lbl_employeeInfo.Size = new System.Drawing.Size(508, 48);
             this.lbl_employeeInfo.TabIndex = 3;
-            this.lbl_employeeInfo.Text = "Employee Information";
+            this.lbl_employeeInfo.Text = "Información de empleados";
             // 
             // frm_EmployeeInfo
             // 
@@ -119,7 +119,7 @@ namespace Proyecto_BASES_POO_2021
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frm_EmployeeInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Employee";
+            this.Text = "Empleado";
             this.Load += new System.EventHandler(this.frm_EmployeeInfo_Load);
             ((System.ComponentModel.ISupportInitialize) (this.dgv_employeeInfo)).EndInit();
             this.ResumeLayout(false);
