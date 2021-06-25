@@ -40,7 +40,7 @@ namespace Proyecto_BASES_POO_2021
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnExportPdf = new System.Windows.Forms.Button();
             this.text_Lugar = new System.Windows.Forms.TextBox();
             this.txtidcabin = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -139,17 +139,18 @@ namespace Proyecto_BASES_POO_2021
             this.pictureBox3.TabIndex = 14;
             this.pictureBox3.TabStop = false;
             // 
-            // button1
+            // btnExportPdf
             // 
-            this.button1.BackColor = System.Drawing.Color.CadetBlue;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.button1.Location = new System.Drawing.Point(772, 485);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 42);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Convertir a PDF";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnExportPdf.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnExportPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnExportPdf.Location = new System.Drawing.Point(772, 485);
+            this.btnExportPdf.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnExportPdf.Name = "btnExportPdf";
+            this.btnExportPdf.Size = new System.Drawing.Size(152, 42);
+            this.btnExportPdf.TabIndex = 15;
+            this.btnExportPdf.Text = "Convertir a PDF";
+            this.btnExportPdf.UseVisualStyleBackColor = false;
+            this.btnExportPdf.Click += new System.EventHandler(this.button1_Click);
             // 
             // text_Lugar
             // 
@@ -263,7 +264,7 @@ namespace Proyecto_BASES_POO_2021
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtidcabin);
             this.Controls.Add(this.text_Lugar);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnExportPdf);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -288,6 +289,8 @@ namespace Proyecto_BASES_POO_2021
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Button btnExportPdf;
 
         private System.Windows.Forms.PictureBox pictureBox5;
 

@@ -41,8 +41,8 @@ namespace Proyecto_BASES_POO_2021
             this.btn_buscar = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.dgvAppointment = new System.Windows.Forms.DataGridView();
-            this.txt_dui = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.lbl_dui = new System.Windows.Forms.TextBox();
+            this.mskDuitTracking = new System.Windows.Forms.MaskedTextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_citas = new System.Windows.Forms.TextBox();
@@ -56,7 +56,6 @@ namespace Proyecto_BASES_POO_2021
             this.radNoC2 = new System.Windows.Forms.RadioButton();
             this.radSiC = new System.Windows.Forms.RadioButton();
             this.dgvAppointment2 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize) (this.dgvAppointment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
@@ -138,28 +137,28 @@ namespace Proyecto_BASES_POO_2021
             this.dgvAppointment.Size = new System.Drawing.Size(1249, 103);
             this.dgvAppointment.TabIndex = 3;
             // 
-            // txt_dui
+            // lbl_dui
             // 
-            this.txt_dui.BackColor = System.Drawing.Color.CadetBlue;
-            this.txt_dui.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.txt_dui.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txt_dui.ForeColor = System.Drawing.Color.Black;
-            this.txt_dui.Location = new System.Drawing.Point(323, 118);
-            this.txt_dui.Name = "txt_dui";
-            this.txt_dui.ReadOnly = true;
-            this.txt_dui.Size = new System.Drawing.Size(187, 31);
-            this.txt_dui.TabIndex = 4;
-            this.txt_dui.Text = "Ingrese su dui:";
-            this.txt_dui.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lbl_dui.BackColor = System.Drawing.Color.CadetBlue;
+            this.lbl_dui.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.lbl_dui.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lbl_dui.ForeColor = System.Drawing.Color.Black;
+            this.lbl_dui.Location = new System.Drawing.Point(323, 118);
+            this.lbl_dui.Name = "lbl_dui";
+            this.lbl_dui.ReadOnly = true;
+            this.lbl_dui.Size = new System.Drawing.Size(187, 31);
+            this.lbl_dui.TabIndex = 4;
+            this.lbl_dui.Text = "Ingrese su dui:";
+            this.lbl_dui.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // maskedTextBox1
+            // mskDuitTracking
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(323, 158);
-            this.maskedTextBox1.Mask = "00000000-0";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(187, 26);
-            this.maskedTextBox1.TabIndex = 5;
-            this.maskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mskDuitTracking.Location = new System.Drawing.Point(323, 158);
+            this.mskDuitTracking.Mask = "00000000-0";
+            this.mskDuitTracking.Name = "mskDuitTracking";
+            this.mskDuitTracking.Size = new System.Drawing.Size(187, 26);
+            this.mskDuitTracking.TabIndex = 5;
+            this.mskDuitTracking.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox2
             // 
@@ -210,6 +209,7 @@ namespace Proyecto_BASES_POO_2021
             this.btn_pdf_citas.TabIndex = 9;
             this.btn_pdf_citas.Text = "Exportar a PDF";
             this.btn_pdf_citas.UseVisualStyleBackColor = false;
+            this.btn_pdf_citas.Click += new System.EventHandler(this.btn_pdf_citas_Click);
             // 
             // pictureBox3
             // 
@@ -228,7 +228,7 @@ namespace Proyecto_BASES_POO_2021
             this.btn_proceso.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_proceso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btn_proceso.ForeColor = System.Drawing.Color.Black;
-            this.btn_proceso.Location = new System.Drawing.Point(543, 587);
+            this.btn_proceso.Location = new System.Drawing.Point(562, 587);
             this.btn_proceso.Name = "btn_proceso";
             this.btn_proceso.Size = new System.Drawing.Size(186, 64);
             this.btn_proceso.TabIndex = 12;
@@ -240,9 +240,9 @@ namespace Proyecto_BASES_POO_2021
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(750, 594);
+            this.pictureBox4.Location = new System.Drawing.Point(505, 594);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(46, 50);
+            this.pictureBox4.Size = new System.Drawing.Size(51, 50);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 13;
             this.pictureBox4.TabStop = false;
@@ -253,7 +253,7 @@ namespace Proyecto_BASES_POO_2021
             this.btn_citaTracker.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_citaTracker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btn_citaTracker.ForeColor = System.Drawing.Color.Black;
-            this.btn_citaTracker.Location = new System.Drawing.Point(864, 102);
+            this.btn_citaTracker.Location = new System.Drawing.Point(1031, 123);
             this.btn_citaTracker.Name = "btn_citaTracker";
             this.btn_citaTracker.Size = new System.Drawing.Size(205, 62);
             this.btn_citaTracker.TabIndex = 14;
@@ -350,20 +350,12 @@ namespace Proyecto_BASES_POO_2021
             this.dgvAppointment2.Size = new System.Drawing.Size(1249, 116);
             this.dgvAppointment2.TabIndex = 17;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(626, 155);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(124, 26);
-            this.textBox1.TabIndex = 18;
-            // 
             // frm_appointment_tracking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(1248, 663);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dgvAppointment2);
             this.Controls.Add(this.grpC);
             this.Controls.Add(this.btn_citaTracker);
@@ -374,8 +366,8 @@ namespace Proyecto_BASES_POO_2021
             this.Controls.Add(this.txt_citas);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.txt_dui);
+            this.Controls.Add(this.mskDuitTracking);
+            this.Controls.Add(this.lbl_dui);
             this.Controls.Add(this.dgvAppointment);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_buscar);
@@ -385,7 +377,8 @@ namespace Proyecto_BASES_POO_2021
             this.MinimizeBox = false;
             this.Name = "frm_appointment_tracking";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Seguimiento de citas";
+            this.Text = "Seguimiento de citas y cola de espera";
+            this.Load += new System.EventHandler(this.frm_appointment_tracking_Load);
             ((System.ComponentModel.ISupportInitialize) (this.dgvAppointment)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
@@ -396,8 +389,6 @@ namespace Proyecto_BASES_POO_2021
             this.ResumeLayout(false);
             this.PerformLayout();
         }
-
-        private System.Windows.Forms.TextBox textBox1;
 
         private System.Windows.Forms.DataGridView dgvAppointment2;
 
@@ -424,7 +415,7 @@ namespace Proyecto_BASES_POO_2021
 
         private System.Windows.Forms.PictureBox pictureBox2;
 
-        private System.Windows.Forms.TextBox txt_dui;
+        private System.Windows.Forms.TextBox lbl_dui;
 
         private System.Windows.Forms.DataGridView dgvAppointment;
 
@@ -432,7 +423,7 @@ namespace Proyecto_BASES_POO_2021
 
         private System.Windows.Forms.Button btn_buscar;
 
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox mskDuitTracking;
         
 
         #endregion

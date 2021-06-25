@@ -195,8 +195,10 @@ namespace Proyecto_BASES_POO_2021
             // 
             // dtpFirstDateVaccine
             // 
+            this.dtpFirstDateVaccine.Enabled = false;
             this.dtpFirstDateVaccine.Location = new System.Drawing.Point(28, 83);
             this.dtpFirstDateVaccine.Name = "dtpFirstDateVaccine";
+            this.dtpFirstDateVaccine.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpFirstDateVaccine.Size = new System.Drawing.Size(368, 26);
             this.dtpFirstDateVaccine.TabIndex = 0;
             // 

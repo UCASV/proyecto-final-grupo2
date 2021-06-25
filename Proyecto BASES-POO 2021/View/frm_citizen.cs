@@ -46,10 +46,12 @@ namespace Proyecto_BASES_POO_2021
                                     txtAdress_ctzn.Text.Length > 5 &&
                                     txtEmail_ctzn.Text.Length > 5;
 
-                bool verification2 = radSi1.Checked == true ||
-                                     radSi2.Checked == true ||
-                                     radSi3.Checked == true ||
-                                     radSi4.Checked == true;
+                     bool verification2 = radSi1.Checked == true ||
+                                          radSi2.Checked == true ||
+                                          radSi3.Checked == true ||
+                                          radSi4.Checked == true ||
+                                          numericUpDown1.Value > 67 ||
+                                          cmbInstitution.SelectedIndex > 0;
                  if (verification)
                 {
                     var db = new PROJECT_BD_POOContext();
