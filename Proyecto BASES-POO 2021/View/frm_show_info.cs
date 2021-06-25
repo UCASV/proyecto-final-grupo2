@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Windows.Forms;
 using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Proyecto_BASES_POO_2021.ProjectContext;
 using System.Linq;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
 
 namespace Proyecto_BASES_POO_2021
 {
@@ -129,8 +132,64 @@ namespace Proyecto_BASES_POO_2021
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
+        {   
+            
+            FileStream fs = new FileStream(@"C:\Users\USUARIO\Desktop\ProyectoBDPOO\PDFAppointment.pdf", FileMode.Create);
+            Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f); 
+            PdfWriter.GetInstance(pdfDoc, fs);
+            pdfDoc.Open();
+            
+            //Fuente del pdf
+            iTextSharp.text.Font StandarFont = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 8,
+                iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
+            
+            //Encabezado
+            pdfDoc.Add(new Paragraph("Informacion sobre su primera cita"));
+            pdfDoc.Add(Chunk.NEWLINE);
+
+            PdfPTable tabl = new PdfPTable(4);
+            tabl.WidthPercentage = 100;
+            
+            //titulo de las columnas 
+            PdfPCell clDUI = new PdfPCell(new Phrase("DUI", StandarFont));
+            clDUI.BorderWidth = 0;
+            clDUI.BorderWidthBottom = 0.75f;
+            
+            PdfPCell clAppointmentDate = new PdfPCell(new Phrase("Fecha", StandarFont));
+            clAppointmentDate.BorderWidth = 0;
+            clAppointmentDate.BorderWidthBottom = 0.75f;
+            
+            PdfPCell clPlace = new PdfPCell(new Phrase("Lugar", StandarFont));
+            clPlace.BorderWidth = 0;
+            clPlace.BorderWidthBottom = 0.75f;
+            
+            PdfPCell clCabin = new PdfPCell(new Phrase("Cabina", StandarFont));
+            clCabin.BorderWidth = 0;
+            clCabin.BorderWidthBottom = 0.75f;
+
+            tabl.AddCell(clDUI);
+            tabl.AddCell(clAppointmentDate);
+            tabl.AddCell(clPlace);
+            tabl.AddCell(clCabin);
+
+
+            clDUI = new PdfPCell(new Phrase(txtDuiShow.Text, StandarFont));
+            clAppointmentDate = new PdfPCell(new Phrase(txt_fecha.Text, StandarFont));
+            clPlace = new PdfPCell(new Phrase(text_Lugar.Text, StandarFont));
+            clCabin = new PdfPCell(new Phrase(txtidcabin.Text, StandarFont));
+            
+            tabl.AddCell(clDUI);
+            tabl.AddCell(clAppointmentDate);
+            tabl.AddCell(clPlace);
+            tabl.AddCell(clCabin);
+            
+            pdfDoc.Add(tabl);
+            pdfDoc.Close();
+            fs.Close();
+            
+            MessageBox.Show("PDF exportado correctamente!", "Gobierno de El Salvador",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
     }
     
