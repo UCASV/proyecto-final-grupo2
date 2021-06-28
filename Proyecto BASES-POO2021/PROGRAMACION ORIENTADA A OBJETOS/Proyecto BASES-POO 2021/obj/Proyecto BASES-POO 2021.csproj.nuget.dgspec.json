@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\crist\\Desktop\\UCA\\CICLO III\\POO\\PROYECTO\\proyecto-final-grupo2\\Proyecto BASES-POO 2021\\Proyecto BASES-POO 2021.csproj": {}
+    "C:\\Users\\USUARIO\\Desktop\\proyecto-final-grupo2\\Proyecto BASES-POO2021\\PROGRAMACION ORIENTADA A OBJETOS\\Proyecto BASES-POO 2021\\Proyecto BASES-POO 2021.csproj": {}
   },
   "projects": {
-    "C:\\Users\\crist\\Desktop\\UCA\\CICLO III\\POO\\PROYECTO\\proyecto-final-grupo2\\Proyecto BASES-POO 2021\\Proyecto BASES-POO 2021.csproj": {
+    "C:\\Users\\USUARIO\\Desktop\\proyecto-final-grupo2\\Proyecto BASES-POO2021\\PROGRAMACION ORIENTADA A OBJETOS\\Proyecto BASES-POO 2021\\Proyecto BASES-POO 2021.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\crist\\Desktop\\UCA\\CICLO III\\POO\\PROYECTO\\proyecto-final-grupo2\\Proyecto BASES-POO 2021\\Proyecto BASES-POO 2021.csproj",
+        "projectUniqueName": "C:\\Users\\USUARIO\\Desktop\\proyecto-final-grupo2\\Proyecto BASES-POO2021\\PROGRAMACION ORIENTADA A OBJETOS\\Proyecto BASES-POO 2021\\Proyecto BASES-POO 2021.csproj",
         "projectName": "Proyecto BASES-POO 2021",
-        "projectPath": "C:\\Users\\crist\\Desktop\\UCA\\CICLO III\\POO\\PROYECTO\\proyecto-final-grupo2\\Proyecto BASES-POO 2021\\Proyecto BASES-POO 2021.csproj",
-        "packagesPath": "C:\\Users\\crist\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\crist\\Desktop\\UCA\\CICLO III\\POO\\PROYECTO\\proyecto-final-grupo2\\Proyecto BASES-POO 2021\\obj\\",
+        "projectPath": "C:\\Users\\USUARIO\\Desktop\\proyecto-final-grupo2\\Proyecto BASES-POO2021\\PROGRAMACION ORIENTADA A OBJETOS\\Proyecto BASES-POO 2021\\Proyecto BASES-POO 2021.csproj",
+        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\USUARIO\\Desktop\\proyecto-final-grupo2\\Proyecto BASES-POO2021\\PROGRAMACION ORIENTADA A OBJETOS\\Proyecto BASES-POO 2021\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\crist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
