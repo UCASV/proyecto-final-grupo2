@@ -26,6 +26,7 @@
       </Compile>
       <Compile Update="View\frm_show_info.cs">
         <SubType>Form</SubType>
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       </Compile>
       <Compile Update="View\frm_appointment_tracking.cs">
         <SubType>Form</SubType>

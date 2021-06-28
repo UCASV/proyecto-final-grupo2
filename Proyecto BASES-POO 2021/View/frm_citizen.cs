@@ -51,7 +51,8 @@ namespace Proyecto_BASES_POO_2021
                                           radSi3.Checked == true ||
                                           radSi4.Checked == true ||
                                           numericUpDown1.Value > 67 ||
-                                          cmbInstitution.SelectedIndex > 0;
+                                          cmbInstitution.SelectedIndex > 0 ||
+                                          txtCronicDisease.Text.Length > 0;
                  if (verification)
                 {
                     var db = new PROJECT_BD_POOContext();

@@ -44,12 +44,7 @@ namespace Proyecto_BASES_POO_2021
             var query2 = (from a in db.Cabins
                 where a.IdCabin == randomCavin  
                 select a.CabinAddress).FirstOrDefault();
-            
-            //obteniendo fecha de la primera cita
-            var firtvaccine = (from a in db.Appointments
-                where a.DuiC ==  txt_citizenDUI.Text 
-                select a.AppointmentDate).FirstOrDefault();
-            
+
             //muestra la informacion al gestor
             txt_Place.Text = query2;
             txt_cabin.Text = randomCavin.ToString();
@@ -59,10 +54,10 @@ namespace Proyecto_BASES_POO_2021
             dInfo.ShortDatePattern = "dd/MM/yyyy  hh:mm:ss";
             //días para personas de prioridad
 
-            var datemin = firtvaccine.AddDays(42);
+            var datemin = DateTime.Now.AddDays(42);
             //dias para personas que no son de prioridad
-            var newdatemax = firtvaccine.AddDays(47);
-            var newdatemax2 = firtvaccine.AddDays(56);
+            var newdatemax = DateTime.Now.AddDays(47);
+            var newdatemax2 = DateTime.Now.AddDays(56);
             
             if (chb_Priority.Checked == true)
             {

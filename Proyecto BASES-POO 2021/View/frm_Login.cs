@@ -70,7 +70,7 @@ namespace Proyecto_BASES_POO_2021
             //Si el resultado no existe en la base o estan mal escritas las entradas, se le notificara del error al gestor
             if (result.Count == 0)
             {
-                MessageBox.Show("El usuario no existe o\n su usuario y/o contraseña estan mal escritas \n por favor comprubelos nuevamente", "Gobierno de El Salvador",
+                MessageBox.Show("El usuario no existe o \nsu usuario y/o contraseña estan mal escritas \npor favor compruebelos nuevamente", "Gobierno de El Salvador",
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             //si el usuario si existe y la cabina que selecciono es igual a la asignada en la base, se procede a entrar al menu principal
@@ -94,9 +94,9 @@ namespace Proyecto_BASES_POO_2021
                
             }
             else
-            {
+            {   
                 MessageBox.Show("Esta intentado entrar en una cabina que no es suya", "Gobierno de El Salvador",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -153,7 +153,7 @@ namespace Proyecto_BASES_POO_2021
             this.btn_second.TabIndex = 18;
             this.btn_second.Text = "Crear segunda cita";
             this.btn_second.UseVisualStyleBackColor = false;
-            this.btn_second.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button2_MouseClick);
+            this.btn_second.Click += new System.EventHandler(this.btn_second_Click);
             // 
             // button1
             // 
@@ -243,7 +243,8 @@ namespace Proyecto_BASES_POO_2021
             this.MinimizeBox = false;
             this.Name = "frm_vaccinationProcess";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_vaccinationProcess";
+            this.Text = "Proceso de vacunación";
+            this.Load += new System.EventHandler(this.frm_vaccinationProcess_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);

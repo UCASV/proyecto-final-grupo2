@@ -330,8 +330,6 @@ namespace Proyecto_BASES_POO_2021
 
         private System.Windows.Forms.Button btn_aceptar;
 
-        private System.Windows.Forms.Button button1;
-
         private System.Windows.Forms.Label lbl_medico;
 
         private System.Windows.Forms.Label lbl_fecha;

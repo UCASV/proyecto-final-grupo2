@@ -76,12 +76,14 @@ namespace Proyecto_BASES_POO_2021
             
             //Proceso de verificar si el ciudadano existe en la base 
             var db = new PROJECT_BD_POOContext();
+            
             var listaUsuarios = db.CitizenForms
                 .OrderBy(c => c.DuiC)
                 .ToList();
             var result = listaUsuarios.Where(u =>
                     u.DuiC == mskDuitTracking.Text)
                 .ToList();
+            
             //si el resultado es nulo muestra un mensaje de error
             if (result.Count == 0)
             {
@@ -96,30 +98,41 @@ namespace Proyecto_BASES_POO_2021
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
-            {
-                //obteniendo fecha de la cita
-                //cuando ya tiene dos citas se evalua que el día de la cita corresponda con el actual
-                //para poder seleccionarla cita correcta
-                var appointmentdate = (from a in db.Appointments
-                    where a.DuiC ==  mskDuitTracking.Text && a.AppointmentDate.Day == DateTime.Now.Day
-                    select a.AppointmentDate).FirstOrDefault();
+            {   
+                //TryCatch para avisarle a un gestor si el día de la cita ya paso 
+                try
+                {
+                    //obteniendo fecha de la cita
+                
+                    //cuando ya tiene dos citas se evalua que el día de la cita corresponda con el actual
+                    //para poder seleccionarla cita correcta
+                    var appointmentdate = (from a in db.Appointments
+                        where a.DuiC ==  mskDuitTracking.Text && a.AppointmentDate.Day == DateTime.Now.Day
+                        select a.AppointmentDate).FirstOrDefault();
 
-                var newdate = DateTime.Now;
-                var time = (newdate - appointmentdate).ToString(@"dd\d\ hh\h\ mm\m\ ");
+                    var newdate = DateTime.Now;
+                    var time = (newdate - appointmentdate).ToString(@"dd\d\ hh\h\ mm\m\ ");
                 
-                var querytime = (from a in db.Appointments
-                    where a.DuiC == mskDuitTracking.Text && a.AppointmentDate.Day == DateTime.Now.Day
-                    select a).FirstOrDefault();
-                //Actualiza el tiempo esperado en la cita
-                querytime.WaitingTime = time;  
-                db.SaveChanges();
+                    var querytime = (from a in db.Appointments
+                        where a.DuiC == mskDuitTracking.Text && a.AppointmentDate.Day == DateTime.Now.Day
+                        select a).FirstOrDefault();
+                    //Actualiza el tiempo esperado en la cita
+                    querytime.WaitingTime = time;  
+                    db.SaveChanges();
                 
-                //Cuenta las filas que hay en el dgv para pasarlas al otro form
-                var rows = dgvAppointment2.RowCount;
+                    //Cuenta las filas que hay en el dgv para pasarlas al otro form
+                    var rows = dgvAppointment2.RowCount;
                     this.Hide();
                     frm_vaccinationProcess vaccinationProcesss = new frm_vaccinationProcess(mskDuitTracking.Text, rows);
                     vaccinationProcesss.ShowDialog();
                     this.Show();
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show("El día de la cita no a llegado o este ya ha pasado.\n Por favor solicite a los gestores de la base de datos una actualización!", "Gobierno de El Salvador",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
             }
         }
 
@@ -135,7 +148,7 @@ namespace Proyecto_BASES_POO_2021
         private void btn_pdf_citas_Click(object sender, EventArgs e)
         {
             PdfPTable pdfTable = new PdfPTable(dgvAppointment2.ColumnCount);
-            //Adding Header row
+            //añadiendo fila principal 
             foreach (DataGridViewColumn column in dgvAppointment2.Columns)
             {
                 PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
@@ -143,7 +156,7 @@ namespace Proyecto_BASES_POO_2021
                 pdfTable.AddCell(cell);
             }
 
-            //Adding DataRow
+            //añade filas 
             foreach (DataGridViewRow row in dgvAppointment2.Rows)
             {
                 foreach (DataGridViewCell cell in row.Cells)
@@ -152,7 +165,7 @@ namespace Proyecto_BASES_POO_2021
                 }
             }
  
-            //Exporting to PDF
+            //Exportando a PDF
             string folderPath =  @"C:\Users\USUARIO\Desktop\ProyectoBDPOO\PDFAppointment\";
             
             using (FileStream stream = new FileStream(folderPath + txt_pdfName.Text + ".pdf", FileMode.Create))
@@ -177,7 +190,8 @@ namespace Proyecto_BASES_POO_2021
         }
         
         private void txt_pdfName_TextChanged(object sender, EventArgs e)
-        {
+        {   
+            //Validación para que no se pueda oprimir el boton de pdf sin haber escrito un nombre
             if (txt_pdfName.Text.Length > 0)
             {
                 btn_pdf_citas.Enabled = true;
@@ -189,3 +203,5 @@ namespace Proyecto_BASES_POO_2021
         }
     }
 }
+
+

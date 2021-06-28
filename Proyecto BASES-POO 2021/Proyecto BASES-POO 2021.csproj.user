@@ -1,7 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ShowAllFiles>false</ShowAllFiles>
+    <_LastSelectedProfileId>C:\Users\USUARIO\Desktop\ProyectoBDPOO\Proyecto BASES-POO 2021\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
   <ItemGroup>
-    <Compile Update="Form1.cs">
+    <Compile Update="View\frm_citizen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\frm_EmployeeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\frm_mainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\frm_secondVaccine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\frm_vaccinationProcess.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

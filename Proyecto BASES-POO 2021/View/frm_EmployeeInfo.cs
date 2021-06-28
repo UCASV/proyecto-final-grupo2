@@ -20,7 +20,7 @@ namespace Proyecto_BASES_POO_2021
         {
 
             if (!showFromDB)
-            {
+            {   //Llenando el dgv con los datos de la base
                 using (var db = new PROJECT_BD_POOContext())
                 {
                     var employee = db.Managers.ToList();

@@ -310,7 +310,7 @@ namespace Proyecto_BASES_POO_2021
         private System.Windows.Forms.TextBox txt_citizenDUI;
 
         private System.Windows.Forms.TextBox txt_cabin;
-        private System.Windows.Forms.Button button1;
+
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
