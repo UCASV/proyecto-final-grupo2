@@ -53,8 +53,8 @@ namespace Proyecto_BASES_POO_2021
                                           numericUpDown1.Value > 67 ||
                                           cmbInstitution.SelectedIndex > 0 ||
                                           txtCronicDisease.Text.Length > 0;
-                 if (verification)
-                {
+                 if (verification) 
+                 {
                     var db = new PROJECT_BD_POOContext();
                     
                     //Verificacion para saber si la persona es de prioridad o no
@@ -64,7 +64,7 @@ namespace Proyecto_BASES_POO_2021
                         priority = true;
                     else
                         priority = false;
-                   //Insercion de datos del ciudadano en la base
+                    //Insercion de datos del ciudadano en la base
                     var newCitizen = new CitizenForm{
                     
                     DuiC = msktxt_dui_ctzn.Text,

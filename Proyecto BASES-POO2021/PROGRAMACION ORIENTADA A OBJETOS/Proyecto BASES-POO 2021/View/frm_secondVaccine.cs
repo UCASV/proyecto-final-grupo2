@@ -134,7 +134,7 @@ namespace Proyecto_BASES_POO_2021
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string folderPath = @"C:\Users\USUARIO\Desktop\ProyectoBDPOO\PDFAppointment\";
+            string folderPath =  @"C:\Users\USUARIO\Desktop\proyecto-final-grupo2\Proyecto BASES-POO2021\PROGRAMACION ORIENTADA A OBJETOS\PDF\PDFS_SEGUNDA_CITA\";
             FileStream fs = new FileStream(folderPath + txtPdfName.Text + ".pdf", FileMode.Create);
             Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f); 
             PdfWriter.GetInstance(pdfDoc, fs);

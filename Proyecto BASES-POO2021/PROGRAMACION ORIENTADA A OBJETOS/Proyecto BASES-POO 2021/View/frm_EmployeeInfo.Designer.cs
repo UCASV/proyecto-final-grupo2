@@ -81,6 +81,7 @@ namespace Proyecto_BASES_POO_2021
             this.dgv_employeeInfo.Location = new System.Drawing.Point(42, 108);
             this.dgv_employeeInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgv_employeeInfo.Name = "dgv_employeeInfo";
+            this.dgv_employeeInfo.ReadOnly = true;
             this.dgv_employeeInfo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgv_employeeInfo.RowHeadersVisible = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

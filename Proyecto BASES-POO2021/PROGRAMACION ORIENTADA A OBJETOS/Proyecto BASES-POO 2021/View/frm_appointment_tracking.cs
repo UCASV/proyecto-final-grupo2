@@ -166,7 +166,7 @@ namespace Proyecto_BASES_POO_2021
             }
  
             //Exportando a PDF
-            string folderPath =  @"C:\Users\USUARIO\Desktop\ProyectoBDPOO\PDFAppointment\";
+            string folderPath =  @"C:\Users\USUARIO\Desktop\proyecto-final-grupo2\Proyecto BASES-POO2021\PROGRAMACION ORIENTADA A OBJETOS\PDF\PDFS_INFO_REGISTRO_CITAS\";
             
             using (FileStream stream = new FileStream(folderPath + txt_pdfName.Text + ".pdf", FileMode.Create))
             {
